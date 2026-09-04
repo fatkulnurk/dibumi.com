@@ -9,9 +9,6 @@ import ImpactMetrics from "@/components/ImpactMetrics";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 
-// Cloudflare Pages Edge Server-Side Rendering
-export const runtime = "edge";
-
 export default function HomePage() {
   return (
     <main className="min-h-screen flex flex-col justify-between selection:bg-brand-100 selection:text-brand-900 bg-enterprise-pattern">

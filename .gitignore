@@ -17,6 +17,8 @@
 
 # cloudflare
 /.wrangler
+/.open-next
+/.worker-next
 
 # misc
 .DS_Store
