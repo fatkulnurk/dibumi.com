@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { Send, MessageSquare, CheckCircle, Mail, PhoneCall, Sparkles } from "lucide-react";
+import { Send, MessageSquare, CheckCircle, Mail, Sparkles, ShieldCheck } from "lucide-react";
 
 export default function ContactSection() {
   const [formData, setFormData] = useState({
@@ -31,10 +31,10 @@ export default function ContactSection() {
       if (res.ok && data.success) {
         setSubmitted(true);
       } else {
-        setErrorMessage(data.error || "Gagal mengirim pesan. Silakan gunakan WhatsApp langsung.");
+        setErrorMessage(data.error || "Gagal mengirim pesan. Silakan hubungi via WhatsApp langsung.");
       }
     } catch {
-      setErrorMessage("Terjadi kesalahan jaringan. Silakan hubungi via WhatsApp.");
+      setErrorMessage("Terjadi kendala jaringan. Silakan gunakan WhatsApp langsung.");
     } finally {
       setIsSubmitting(false);
     }
@@ -48,50 +48,49 @@ export default function ContactSection() {
   return (
     <section id="contact" className="py-24 md:py-32 bg-zinc-950 border-t border-white/10 relative">
       <div className="max-w-7xl mx-auto px-6 sm:px-8">
-        {/* Section Header */}
+        {/* Header */}
         <div className="max-w-3xl mb-16">
-          <div className="font-mono text-xs uppercase tracking-widest text-teal-400 mb-3">
-            05 — Konsultasi & Mulai Proyek
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-teal-500/10 border border-teal-500/20 text-teal-400 font-mono text-xs uppercase tracking-widest mb-4">
+            <span>04 — Direct Consultation</span>
           </div>
-          <h2 className="text-3xl sm:text-5xl font-light text-white tracking-tight leading-tight mb-4">
-            Siap membangun sistem impian?{" "}
-            <span className="font-serif italic text-teal-300">
-              Diskusikan sekarang.
+          <h2 className="text-3xl sm:text-5xl font-light text-white tracking-tight leading-[1.15] mb-4">
+            Mulai rekayasa sistem Anda.{" "}
+            <span className="font-serif italic font-normal text-teal-300">
+              Diskusikan hari ini.
             </span>
           </h2>
           <p className="text-zinc-400 text-sm font-light leading-relaxed">
-            Kirimkan detail kebutuhan proyek Anda atau klik tombol WhatsApp untuk
-            respon cepat langsung dari tim engineer dibumi.com.
+            Kirimkan brief kebutuhan Anda atau hubungi langsung via WhatsApp untuk respon cepat dari technical team dibumi.com.
           </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
           {/* Left Column: Direct Info & WhatsApp Box */}
           <div className="lg:col-span-5 space-y-6">
-            <div className="glass-card rounded-2xl p-8 border border-white/10">
-              <h3 className="text-lg font-medium text-white mb-4">
-                Hubungi Kami Langsung
+            <div className="bento-card p-8 border border-white/10">
+              <h3 className="text-lg font-medium text-white mb-3">
+                Jalur Komunikasi Langsung
               </h3>
               <p className="text-xs text-zinc-400 leading-relaxed mb-6 font-light">
-                Kami siap membantu Anda memilih arsitektur terbaik, estimasi timeline,
-                serta penawaran biaya yang transparan tanpa komitmen awal.
+                Konsultasikan ide arsitektur, kebutuhan WebView Android, optimasi server,
+                maupun pembuatan web korporat Anda tanpa komitmen awal.
               </p>
 
               <div className="space-y-4 pt-4 border-t border-white/10">
                 <div className="flex items-center gap-3 text-xs text-zinc-300">
-                  <div className="p-2 rounded-lg bg-zinc-900 text-teal-400 border border-white/5">
+                  <div className="p-2.5 rounded-xl bg-zinc-900 text-teal-400 border border-white/5">
                     <Mail className="w-4 h-4" />
                   </div>
                   <div>
                     <div className="text-[11px] text-zinc-400">Email Resmi</div>
-                    <a href="mailto:halo@dibumi.com" className="hover:text-teal-300 font-mono">
+                    <a href="mailto:halo@dibumi.com" className="hover:text-teal-300 font-mono text-zinc-200">
                       halo@dibumi.com
                     </a>
                   </div>
                 </div>
 
                 <div className="flex items-center gap-3 text-xs text-zinc-300">
-                  <div className="p-2 rounded-lg bg-zinc-900 text-teal-400 border border-white/5">
+                  <div className="p-2.5 rounded-xl bg-zinc-900 text-teal-400 border border-white/5">
                     <MessageSquare className="w-4 h-4" />
                   </div>
                   <div>
@@ -109,10 +108,10 @@ export default function ContactSection() {
                   href={getWhatsAppLink()}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full inline-flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-black font-semibold text-xs uppercase tracking-wider transition-all shadow-lg shadow-emerald-500/20"
+                  className="w-full inline-flex items-center justify-center gap-2 py-3.5 px-4 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-black font-semibold text-xs uppercase tracking-wider transition-all shadow-lg shadow-emerald-500/20 shimmer-btn"
                 >
                   <MessageSquare className="w-4 h-4" />
-                  <span>Chat WhatsApp Sekarang</span>
+                  <span>Chat WhatsApp Tim dibumi</span>
                 </a>
               </div>
             </div>
@@ -120,19 +119,19 @@ export default function ContactSection() {
             {/* Privacy & SLA Card */}
             <div className="rounded-2xl p-6 bg-zinc-900/40 border border-white/5 text-xs text-zinc-400 font-light space-y-2">
               <div className="flex items-center gap-2 text-zinc-200 font-medium">
-                <Sparkles className="w-4 h-4 text-teal-400" />
-                <span>Kerahasiaan & NDA Terjamin</span>
+                <ShieldCheck className="w-4 h-4 text-teal-400" />
+                <span>NDA &amp; Kepemilikan Penuh</span>
               </div>
               <p>
-                Setiap ide bisnis, rancangan database, dan kode software Anda
-                dilindungi dengan perjanjian kerahasiaan (Non-Disclosure Agreement).
+                Setiap data bisnis, struktur database, dan hak cipta software Anda dilindungi
+                dengan jaminan kerahasiaan penuh.
               </p>
             </div>
           </div>
 
           {/* Right Column: Form SSR Handled */}
           <div className="lg:col-span-7">
-            <div className="glass-card rounded-2xl p-8 border border-white/10">
+            <div className="bento-card p-8 border border-white/10">
               {submitted ? (
                 <div className="py-12 text-center space-y-4">
                   <div className="w-12 h-12 rounded-full bg-teal-500/20 text-teal-400 flex items-center justify-center mx-auto">
@@ -141,8 +140,8 @@ export default function ContactSection() {
                   <h3 className="text-xl font-medium text-white">
                     Pesan Berhasil Terkirim!
                   </h3>
-                  <p className="text-xs text-zinc-400 max-w-md mx-auto leading-relaxed">
-                    Terima kasih telah menghubungi kami. Tim engineer dibumi.com
+                  <p className="text-xs text-zinc-400 max-w-md mx-auto leading-relaxed font-light">
+                    Terima kasih telah menghubungi kami. Technical team dibumi.com
                     akan meninjau kebutuhan Anda dan membalas dalam waktu maksimal 1x24 jam.
                   </p>
                   <button
@@ -155,7 +154,7 @@ export default function ContactSection() {
                         message: "",
                       });
                     }}
-                    className="text-xs text-teal-400 hover:underline pt-4 block mx-auto"
+                    className="text-xs text-teal-400 hover:underline pt-4 block mx-auto font-mono"
                   >
                     Kirim Pesan Lainnya →
                   </button>
@@ -175,7 +174,7 @@ export default function ContactSection() {
                         onChange={(e) =>
                           setFormData({ ...formData, name: e.target.value })
                         }
-                        className="w-full px-4 py-3 rounded-xl bg-zinc-900 border border-white/10 text-white text-xs placeholder:text-zinc-500 focus:outline-none focus:border-teal-500 focus:ring-1 focus:ring-teal-500 transition-all"
+                        className="w-full px-4 py-3 rounded-xl bg-zinc-900 border border-white/10 text-white text-xs placeholder:text-zinc-500 focus:outline-none focus:border-teal-500 transition-all"
                       />
                     </div>
 
@@ -191,36 +190,36 @@ export default function ContactSection() {
                         onChange={(e) =>
                           setFormData({ ...formData, email: e.target.value })
                         }
-                        className="w-full px-4 py-3 rounded-xl bg-zinc-900 border border-white/10 text-white text-xs placeholder:text-zinc-500 focus:outline-none focus:border-teal-500 focus:ring-1 focus:ring-teal-500 transition-all"
+                        className="w-full px-4 py-3 rounded-xl bg-zinc-900 border border-white/10 text-white text-xs placeholder:text-zinc-500 focus:outline-none focus:border-teal-500 transition-all"
                       />
                     </div>
                   </div>
 
                   <div>
                     <label className="block text-xs font-mono text-zinc-300 uppercase tracking-wider mb-2">
-                      Kebutuhan Layanan
+                      Kebutuhan Layanan Utama
                     </label>
                     <select
                       value={formData.service}
                       onChange={(e) =>
                         setFormData({ ...formData, service: e.target.value })
                       }
-                      className="w-full px-4 py-3 rounded-xl bg-zinc-900 border border-white/10 text-white text-xs focus:outline-none focus:border-teal-500 focus:ring-1 focus:ring-teal-500 transition-all cursor-pointer"
+                      className="w-full px-4 py-3 rounded-xl bg-zinc-900 border border-white/10 text-white text-xs focus:outline-none focus:border-teal-500 transition-all cursor-pointer"
                     >
                       <option value="Custom Software Development">
-                        Custom Software Development (Sistem & Web App)
-                      </option>
-                      <option value="Company Profile & Modern Web">
-                        Company Profile & Modern Web (Next.js SSR)
-                      </option>
-                      <option value="Custom Android Apps">
-                        Custom Android Apps (Native / Cross-Platform)
+                        Custom Software Development (Sistem &amp; Microservices)
                       </option>
                       <option value="Jasa Pembuatan WebView Android">
                         Jasa Pembuatan WebView Android (Play Store Ready)
                       </option>
+                      <option value="Company Profile Modern Next.js SSR">
+                        Company Profile Modern (Next.js 16 SSR)
+                      </option>
                       <option value="Kelola Server & DevOps">
-                        Kelola Server, Hardening & DevOps Linux
+                        Kelola Server, Hardening &amp; DevOps Linux
+                      </option>
+                      <option value="Custom Android Native Apps">
+                        Custom Android Native Apps (Kotlin/Flutter)
                       </option>
                       <option value="Lainnya / Konsultasi Arsitektur">
                         Lainnya / Konsultasi Arsitektur Sistem
@@ -230,17 +229,17 @@ export default function ContactSection() {
 
                   <div>
                     <label className="block text-xs font-mono text-zinc-300 uppercase tracking-wider mb-2">
-                      Deskripsi Kebutuhan & Target Waktu
+                      Deskripsi Kebutuhan Singkat
                     </label>
                     <textarea
                       required
                       rows={4}
-                      placeholder="Jelaskan secara singkat fitur utama yang dibutuhkan, target pengguna, atau kendala server saat ini..."
+                      placeholder="Jelaskan gambaran fitur utama, target rilis, atau kebutuhan server saat ini..."
                       value={formData.message}
                       onChange={(e) =>
                         setFormData({ ...formData, message: e.target.value })
                       }
-                      className="w-full px-4 py-3 rounded-xl bg-zinc-900 border border-white/10 text-white text-xs placeholder:text-zinc-500 focus:outline-none focus:border-teal-500 focus:ring-1 focus:ring-teal-500 transition-all resize-none"
+                      className="w-full px-4 py-3 rounded-xl bg-zinc-900 border border-white/10 text-white text-xs placeholder:text-zinc-500 focus:outline-none focus:border-teal-500 transition-all resize-none"
                     />
                   </div>
 
@@ -253,7 +252,7 @@ export default function ContactSection() {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full py-3.5 px-6 rounded-xl bg-white text-black font-semibold text-xs uppercase tracking-wider hover:bg-zinc-200 transition-all disabled:opacity-50 flex items-center justify-center gap-2 shadow-lg"
+                    className="w-full py-3.5 px-6 rounded-xl bg-white text-black font-semibold text-xs uppercase tracking-wider hover:bg-zinc-200 transition-all disabled:opacity-50 flex items-center justify-center gap-2 shadow-lg shimmer-btn"
                   >
                     {isSubmitting ? (
                       <span>Mengirim Formulir...</span>
