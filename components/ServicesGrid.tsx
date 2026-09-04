@@ -33,10 +33,10 @@ export default function ServicesGrid() {
       title: "Company Profile & Modern Web",
       highlight: "Tampilan berkelas, cepat & SEO-ready",
       description:
-        "Website perusahaan, portofolio eksekutif, dan landing page konversi tinggi dengan teknologi SSR terkini (Next.js/React) yang super cepat dan responsif.",
+        "Website perusahaan, portofolio eksekutif, dan landing page konversi tinggi yang cepat, responsif, dan mudah dikelola.",
       features: [
         "Skor Google Lighthouse 95+",
-        "Server-Side Rendering (SSR) & instant load",
+        "Struktur halaman cepat & instant load",
         "Optimasi SEO on-page & dynamic OpenGraph",
       ],
       tag: "Branding & Leads",
@@ -81,7 +81,7 @@ export default function ServicesGrid() {
         "Server hardening & firewall configuration",
         "Automasi daily/weekly encrypted backup",
         "Reverse proxy, SSL setup, & Nginx tuning",
-        "Mitigasi DDoS & optimasi Cloudflare",
+        "Mitigasi DDoS & optimasi jaringan",
       ],
       tag: "24/7 Reliability",
     },

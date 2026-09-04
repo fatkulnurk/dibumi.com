@@ -17,8 +17,8 @@ export default function Impact() {
     },
     {
       value: "< 50ms",
-      label: "Global Edge Latency",
-      description: "Didukung jaringan Cloudflare Edge global di 300+ kota di seluruh dunia.",
+      label: "Fast Response",
+      description: "Pengalaman digital yang ringan, cepat, dan nyaman digunakan pelanggan Anda.",
       icon: Globe2,
     },
     {
@@ -84,8 +84,8 @@ export default function Impact() {
 
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4 text-center">
             {[
-              { name: "Next.js 15", category: "Fullstack / SSR" },
-              { name: "Cloudflare Pages", category: "Edge Network" },
+              { name: "Modern Web", category: "Web Experience" },
+              { name: "Cloud Infrastructure", category: "Reliable Systems" },
               { name: "Android (Kotlin)", category: "Mobile Native" },
               { name: "TypeScript", category: "Type-Safe Dev" },
               { name: "Docker & Linux", category: "DevOps & Server" },

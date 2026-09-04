@@ -5,13 +5,13 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://dibumi.com"),
   title: "dibumi.com — Engineering What's Next | Custom Software & Cloud Solutions",
   description:
-    "Solusi rekayasa perangkat lunak presisi tinggi: Custom Software Development, Modern Company Profile, Custom Android Apps, Jasa Pembuatan WebView Android, dan Kelola Server & DevOps berkinerja tinggi.",
+    "Perusahaan pengembangan software berbasis di Surabaya, Indonesia. Kami membangun custom software, website perusahaan, aplikasi Android, WebView Android, dan infrastruktur server yang andal.",
   keywords: [
     "custom software development",
     "jasa pembuatan webview android",
     "kelola server devops",
     "custom android apps",
-    "jasa company profile nextjs",
+    "jasa company profile perusahaan",
     "pembuatan website cepat",
     "dibumi",
     "software house indonesia",
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "dibumi.com — Engineering What's Next",
     description:
-      "Studio rekayasa software & infrastruktur cloud: Custom Software, Android Native & WebView, Company Profile, dan Manajemen Server Linux/DevOps.",
+      "Perusahaan teknologi dari Surabaya yang membantu bisnis membangun software, aplikasi Android, website, dan infrastruktur digital yang siap berkembang.",
     url: "https://dibumi.com",
     siteName: "dibumi.com",
     locale: "id_ID",

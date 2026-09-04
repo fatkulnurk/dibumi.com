@@ -22,15 +22,15 @@ export default function Solutions() {
     },
     {
       badge: "Paling Populer",
-      title: "Company Profile Modern Next.js SSR",
+      title: "Company Profile Modern",
       time: "Pengerjaan 3 - 7 Hari Kerja",
       description:
-        "Website korporat berkelas dengan performa ultra cepat (Lighthouse 95+), Server-Side Rendering di edge Cloudflare, desain elegan, dan integrasi WhatsApp.",
+        "Website korporat berkelas dengan performa cepat, struktur SEO yang rapi, desain elegan, dan integrasi WhatsApp.",
       specs: [
-        "Framework Next.js 15 App Router + Tailwind",
+        "Struktur website modern dan mudah dikembangkan",
         "Desain eksklusif (Dark/Light Minimalist)",
         "SEO Meta Tags, Schema JSON-LD, Sitemap",
-        "Setup Domain, SSL & Cloudflare Pages Edge",
+        "Setup domain, SSL, dan deployment",
         "Form Kontak terhubung ke Email & WhatsApp",
       ],
       ctaText: "Bangun Company Profile",
@@ -55,7 +55,7 @@ export default function Solutions() {
   ];
 
   return (
-    <section id="solutions" className="py-24 md:py-32 bg-zinc-950/60 border-t border-white/5 relative">
+    <section id="solutions" className="py-24 md:py-32 bg-tosca-50/80 border-t border-tosca-900/10 relative">
       <div className="max-w-7xl mx-auto px-6 sm:px-8">
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">

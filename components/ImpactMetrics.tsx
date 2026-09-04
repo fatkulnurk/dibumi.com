@@ -21,8 +21,8 @@ export default function ImpactMetrics() {
     },
     {
       value: "< 45ms",
-      label: "Global Edge Latency",
-      description: "Didukung jaringan Cloudflare Edge global di 300+ kota di seluruh dunia.",
+      label: "Fast Response",
+      description: "Pengalaman digital yang ringan, cepat, dan nyaman digunakan pelanggan Anda.",
       icon: Globe2,
       color: "text-cyan-400",
       bg: "bg-cyan-500/10",

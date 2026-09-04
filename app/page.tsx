@@ -13,7 +13,7 @@ export const runtime = "edge";
 
 export default function HomePage() {
   return (
-    <main className="min-h-screen flex flex-col justify-between selection:bg-teal-500/30 selection:text-teal-200 bg-grid-pattern">
+    <main className="light-theme min-h-screen flex flex-col justify-between selection:bg-tosca-200 selection:text-tosca-900 bg-grid-pattern">
       <Navbar />
 
       <div className="flex-grow">
@@ -25,7 +25,7 @@ export default function HomePage() {
         <ContactSection />
       </div>
 
-      <Footer edgeLocation="Cloudflare Edge SSR (Next.js 16)" />
+      <Footer edgeLocation="Surabaya, Indonesia" />
     </main>
   );
 }

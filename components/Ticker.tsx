@@ -12,7 +12,7 @@ export default function Ticker() {
     "API & Microservices Architecture",
     "Server Hardening & DDoS Mitigation",
     "OneSignal Push Notification",
-    "Cloudflare Edge SSR Deployment",
+    "Website Perusahaan Berperforma Tinggi",
   ];
 
   return (

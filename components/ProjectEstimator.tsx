@@ -36,10 +36,10 @@ export default function ProjectEstimator() {
     },
     {
       id: "company-web",
-      name: "Company Profile Modern Next.js 16 SSR",
+      name: "Company Profile Modern",
       category: "Web",
       days: 5,
-      description: "Website perusahaan ultra-cepat, skor Core Web Vitals 95+, Edge SSR Cloudflare, SEO JSON-LD.",
+      description: "Website perusahaan cepat, mudah ditemukan, responsif, dan siap menjadi pusat informasi bisnis Anda.",
       recommended: true,
     },
     {

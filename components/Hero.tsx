@@ -6,7 +6,7 @@ export default function Hero() {
   const servicePills = [
     { label: "Custom Software", icon: Code2, href: "#services" },
     { label: "WebView Android", icon: Layers, href: "#services" },
-    { label: "Company Profile SSR", icon: Globe, href: "#services" },
+    { label: "Company Profile", icon: Globe, href: "#services" },
     { label: "Kelola Server & DevOps", icon: Server, href: "#services" },
     { label: "Custom Android Native", icon: Smartphone, href: "#services" },
   ];
@@ -18,14 +18,14 @@ export default function Hero() {
 
       <div className="max-w-7xl mx-auto px-6 sm:px-8">
         <div className="max-w-4xl">
-          {/* Top Edge SSR Badge */}
-          <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-zinc-900/90 border border-teal-500/30 text-teal-300 text-xs font-mono uppercase tracking-wider mb-8 shadow-sm">
+          {/* Top service badge */}
+          <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white/75 border border-teal-500/30 text-teal-700 text-xs font-mono uppercase tracking-wider mb-8 shadow-sm shadow-teal-900/5">
             <span className="w-2 h-2 rounded-full bg-teal-400 animate-ping" />
-            <span>Next.js 16 SSR • Edge-Native Execution</span>
+            <span>Software house • Surabaya, Indonesia</span>
           </div>
 
           {/* Evozi-style Headline */}
-          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-light tracking-tight text-white leading-[1.1] mb-8">
+          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-light tracking-tight text-slate-900 leading-[1.1] mb-8">
             We engineer{" "}
             <span className="font-serif italic font-normal text-teal-300">
               what&apos;s next.
@@ -33,20 +33,20 @@ export default function Hero() {
           </h1>
 
           {/* Subheading */}
-          <p className="text-lg sm:text-xl text-zinc-400 font-light leading-relaxed max-w-2xl mb-10">
-            <strong className="text-zinc-100 font-medium">dibumi.com</strong> membangun
+          <p className="text-lg sm:text-xl text-slate-600 font-light leading-relaxed max-w-2xl mb-10">
+            <strong className="text-slate-900 font-medium">dibumi.com</strong> membangun
             perangkat lunak berkinerja tinggi: dari{" "}
-            <span className="text-zinc-200">Custom Software &amp; Microservices</span>,{" "}
-            <span className="text-zinc-200">Jasa WebView Android siap Google Play</span>,{" "}
-            <span className="text-zinc-200">Company Profile ultra-cepat</span>, hingga{" "}
-            <span className="text-zinc-200">Server Hardening &amp; DevOps</span> yang andal 24/7.
+            <span className="text-slate-800">Custom Software &amp; Microservices</span>,{" "}
+            <span className="text-slate-800">Jasa WebView Android siap Google Play</span>,{" "}
+            <span className="text-slate-800">Company Profile ultra-cepat</span>, hingga{" "}
+            <span className="text-slate-800">Server Hardening &amp; DevOps</span> yang andal 24/7.
           </p>
 
           {/* CTA Group */}
           <div className="flex flex-wrap items-center gap-4 mb-14">
             <Link
               href="#estimator"
-              className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-white text-black font-semibold text-xs uppercase tracking-wider hover:bg-zinc-200 transition-all shadow-xl hover:shadow-teal-500/10 group shimmer-btn"
+              className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-gradient-to-r from-teal-600 to-cyan-500 text-white font-semibold text-xs uppercase tracking-wider hover:from-teal-700 hover:to-cyan-600 transition-all shadow-xl shadow-teal-600/20 group shimmer-btn"
             >
               <span>Hitung Estimasi Proyek</span>
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -54,7 +54,7 @@ export default function Hero() {
 
             <Link
               href="#services"
-              className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-zinc-900 border border-white/15 text-zinc-300 font-semibold text-xs uppercase tracking-wider hover:text-white hover:border-teal-500/50 hover:bg-zinc-800/80 transition-all"
+              className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-white/75 border border-teal-900/15 text-teal-900 font-semibold text-xs uppercase tracking-wider hover:text-teal-700 hover:border-teal-500/50 hover:bg-white transition-all shadow-sm"
             >
               <span>Lihat Semua Layanan</span>
             </Link>

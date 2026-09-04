@@ -121,7 +121,7 @@ export default function BentoServices() {
 
                 {activeTab === "api" && (
                   <div className="text-zinc-300 space-y-1 text-[11px] overflow-x-auto">
-                    <p className="text-zinc-500">// High-throughput Edge Pipeline</p>
+                    <p className="text-zinc-500">// High-throughput business pipeline</p>
                     <p>
                       <span className="text-purple-400">export const</span>{" "}
                       <span className="text-teal-300">runtime</span> ={" "}
@@ -363,7 +363,7 @@ export default function BentoServices() {
                       High-Speed Web
                     </span>
                     <h3 className="text-lg font-medium text-white">
-                      Company Profile Next.js 16
+                      Company Profile Modern
                     </h3>
                   </div>
                 </div>
@@ -373,7 +373,7 @@ export default function BentoServices() {
               </div>
 
               <p className="text-xs text-zinc-400 font-light leading-relaxed mb-6">
-                Landing page &amp; web profil korporat dengan Server-Side Rendering di edge global Cloudflare.
+                Landing page dan web profil korporat dengan performa cepat, struktur rapi, dan pengalaman yang konsisten di semua perangkat.
               </p>
 
               {/* Lighthouse Score Showcase */}

@@ -47,10 +47,10 @@ export default function Navbar() {
         {/* Brand Logo */}
         <Link
           href="/"
-          className="group flex items-center gap-3 text-white focus:outline-none"
+          className="group flex items-center gap-3 text-ink focus:outline-none"
         >
-          <div className="w-8 h-8 rounded-xl bg-gradient-to-br from-zinc-800 to-zinc-950 border border-white/15 flex items-center justify-center group-hover:border-teal-500/50 transition-colors shadow-inner">
-            <span className="font-mono text-xs font-bold text-teal-400">db</span>
+          <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-teal-500 to-cyan-400 border border-teal-300 flex items-center justify-center group-hover:scale-105 transition-transform shadow-lg shadow-teal-500/20">
+            <span className="font-mono text-xs font-bold text-white">db</span>
           </div>
           <div className="flex flex-col">
             <span className="font-semibold tracking-tight text-base group-hover:text-teal-300 transition-colors flex items-center gap-1">
@@ -60,25 +60,25 @@ export default function Navbar() {
         </Link>
 
         {/* Center Nav Desktop */}
-        <nav className="hidden md:flex items-center gap-1 bg-zinc-900/70 border border-white/10 rounded-full px-4 py-1.5 shadow-xl backdrop-blur-md">
+        <nav className="hidden md:flex items-center gap-1 bg-white/70 border border-teal-900/10 rounded-full px-4 py-1.5 shadow-lg shadow-teal-900/5 backdrop-blur-md">
           {navLinks.map((link) => (
             <Link
               key={link.name}
               href={link.href}
-              className="px-3.5 py-1 text-xs uppercase tracking-wider font-medium text-zinc-400 hover:text-white hover:bg-white/5 rounded-full transition-all"
+              className="px-3.5 py-1 text-xs uppercase tracking-wider font-medium text-slate-600 hover:text-tosca-700 hover:bg-tosca-50 rounded-full transition-all"
             >
               {link.name}
             </Link>
           ))}
         </nav>
 
-        {/* Right Action & Live Edge Status */}
+        {/* Availability status */}
         <div className="hidden lg:flex items-center gap-4">
-          <div className="flex items-center gap-2 px-3 py-1 rounded-full bg-zinc-900/60 border border-white/10 text-[11px] font-mono text-zinc-400">
+          <div className="flex items-center gap-2 px-3 py-1 rounded-full bg-white/70 border border-teal-900/10 text-[11px] font-mono text-zinc-400 shadow-sm">
             <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
             <span>
-              Cloudflare Edge:{" "}
-              <strong className="text-zinc-200">
+              Live Status:{" "}
+                <strong className="text-teal-800">
                 {edgeInfo ? edgeInfo.datacenter : "Live"}
               </strong>
             </span>
@@ -86,7 +86,7 @@ export default function Navbar() {
 
           <Link
             href="#estimator"
-            className="inline-flex items-center gap-1.5 text-xs font-semibold px-4 py-2 rounded-full bg-white text-black hover:bg-zinc-200 transition-all shadow-md group"
+            className="inline-flex items-center gap-1.5 text-xs font-semibold px-4 py-2 rounded-full bg-gradient-to-r from-teal-600 to-cyan-500 text-white hover:from-teal-700 hover:to-cyan-600 transition-all shadow-md shadow-teal-600/20 group"
           >
             <span>Kalkulator Proyek</span>
             <ArrowUpRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
@@ -96,7 +96,7 @@ export default function Navbar() {
         {/* Mobile Hamburger */}
         <button
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          className="md:hidden p-2 rounded-lg text-zinc-400 hover:text-white hover:bg-zinc-800 transition"
+          className="md:hidden p-2 rounded-lg text-teal-700 hover:text-teal-900 hover:bg-teal-50 transition"
           aria-label="Toggle Navigation"
         >
           {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
@@ -121,7 +121,7 @@ export default function Navbar() {
           <div className="pt-3 border-t border-white/10 space-y-3">
             <div className="text-[11px] font-mono text-zinc-400 flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-              <span>Edge Status: Active • Next.js 16 SSR</span>
+               <span>Technical team aktif • Surabaya, Indonesia</span>
             </div>
             <Link
               href="#contact"

@@ -129,7 +129,7 @@ export default function ContactSection() {
             </div>
           </div>
 
-          {/* Right Column: Form SSR Handled */}
+          {/* Project inquiry form */}
           <div className="lg:col-span-7">
             <div className="bento-card p-8 border border-white/10">
               {submitted ? (
@@ -212,8 +212,8 @@ export default function ContactSection() {
                       <option value="Jasa Pembuatan WebView Android">
                         Jasa Pembuatan WebView Android (Play Store Ready)
                       </option>
-                      <option value="Company Profile Modern Next.js SSR">
-                        Company Profile Modern (Next.js 16 SSR)
+                      <option value="Company Profile Modern">
+                        Company Profile Modern
                       </option>
                       <option value="Kelola Server & DevOps">
                         Kelola Server, Hardening &amp; DevOps Linux
