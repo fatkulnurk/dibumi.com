@@ -10,461 +10,371 @@ import {
   Layers,
   ShieldCheck,
   ArrowUpRight,
-  Terminal,
   Bell,
   Camera,
   FolderUp,
-  Cpu,
-  Zap,
   Lock,
   CheckCircle2,
-  Activity,
+  Zap,
   HardDrive,
+  Check,
 } from "lucide-react";
 
 export default function BentoServices() {
-  const [activeTab, setActiveTab] = useState<"api" | "auth" | "db">("api");
   const [webViewFeature, setWebViewFeature] = useState<"notif" | "cam" | "offline">("notif");
 
   return (
-    <section id="services" className="py-24 md:py-32 relative">
+    <section id="services" className="py-24 md:py-32 relative bg-slate-50/50">
       <div className="max-w-7xl mx-auto px-6 sm:px-8">
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
-          <div>
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-teal-500/10 border border-teal-500/20 text-teal-400 font-mono text-xs uppercase tracking-widest mb-4">
-              <span>01 — Capability Matrix</span>
+          <div className="max-w-2xl">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-100/80 text-brand-800 font-mono text-xs font-semibold uppercase tracking-widest mb-4">
+              <span>01 — Layanan Spesialis</span>
             </div>
-            <h2 className="text-3xl sm:text-5xl font-light text-white tracking-tight leading-[1.15]">
-              Rekayasa software presisi tinggi.{" "}
-              <span className="font-serif italic font-normal text-teal-300">
-                Dirancang untuk skala global.
+            <h2 className="text-3xl sm:text-5xl font-bold text-slate-900 tracking-tight leading-[1.15]">
+              Solusi rekayasa digital lengkap.{" "}
+              <span className="font-serif italic font-normal text-transparent bg-clip-text bg-gradient-to-r from-brand-700 to-cyan-600">
+                Presisi, terukur, dan bergaransi.
               </span>
             </h2>
           </div>
-          <p className="text-sm text-zinc-400 max-w-md font-light leading-relaxed">
-            Setiap lini produk dan infrastruktur dibangun menggunakan arsitektur modular, 
-            keamanan berlapis, dan performa Server-Side Rendering tanpa kompromi.
+          <p className="text-sm text-slate-600 max-w-md leading-relaxed">
+            Dari sistem inti perusahaan, aplikasi mobile Play Store, hingga infrastruktur server Linux. Dikerjakan langsung oleh software engineer berpengalaman di Surabaya.
           </p>
         </div>
 
         {/* Bento Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-12 gap-6">
-          {/* Card 1: Custom Software Development (Large 8-col) */}
-          <div className="lg:col-span-8 bento-card p-8 flex flex-col justify-between group">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-6">
+          {/* Card 1: Custom Software Development (8 Cols) */}
+          <div className="lg:col-span-8 enterprise-card rounded-2xl p-8 flex flex-col justify-between group">
             <div>
               <div className="flex items-center justify-between mb-6">
                 <div className="flex items-center gap-3">
-                  <div className="p-2.5 rounded-xl bg-teal-500/10 border border-teal-500/20 text-teal-400">
-                    <Code2 className="w-5 h-5" />
+                  <div className="p-3 rounded-xl bg-brand-50 border border-brand-200/80 text-brand-700 group-hover:bg-brand-600 group-hover:text-white transition-all">
+                    <Code2 className="w-6 h-6" />
                   </div>
                   <div>
-                    <span className="text-xs font-mono uppercase tracking-wider text-teal-400">
-                      Core Architecture
+                    <span className="text-xs font-mono uppercase tracking-wider text-brand-700 font-semibold">
+                      Enterprise Core System
                     </span>
-                    <h3 className="text-xl font-medium text-white">
+                    <h3 className="text-2xl font-bold text-slate-900">
                       Custom Software Development
                     </h3>
                   </div>
                 </div>
-                <span className="font-mono text-xs text-zinc-500 font-semibold bg-zinc-900/80 px-2.5 py-1 rounded-md border border-white/5">
+                <span className="font-mono text-xs text-slate-400 font-semibold bg-slate-100 px-3 py-1 rounded-md">
                   01 / 06
                 </span>
               </div>
 
-              <p className="text-sm text-zinc-400 font-light leading-relaxed mb-6">
-                Pengembangan sistem enterprise tailor-made, workflow otomasi bisnis, arsitektur
-                microservices berlatensi rendah, serta integrasi multi-API yang tangguh.
+              <p className="text-sm text-slate-600 leading-relaxed mb-6">
+                Pengembangan perangkat lunak kustom yang dirancang tepat sesuai dengan workflow unik bisnis Anda. Cocok untuk sistem automasi internal, platform SaaS, integrasi antarsistem, dashboard monitoring eksekutif, dan ERP/CRM modular.
               </p>
 
-              {/* Interactive Code Preview Box */}
-              <div className="rounded-xl bg-zinc-950/80 border border-white/10 p-4 font-mono text-xs mb-6">
-                <div className="flex items-center justify-between border-b border-white/5 pb-2.5 mb-3">
-                  <div className="flex gap-1.5">
-                    <span className="w-2.5 h-2.5 rounded-full bg-red-500/60" />
-                    <span className="w-2.5 h-2.5 rounded-full bg-yellow-500/60" />
-                    <span className="w-2.5 h-2.5 rounded-full bg-emerald-500/60" />
+              {/* Functional Feature Highlights */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
+                <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200/70 space-y-1">
+                  <div className="text-xs font-bold text-slate-900 flex items-center gap-1.5">
+                    <Check className="w-3.5 h-3.5 text-brand-600 stroke-[3]" />
+                    Integrasi API &amp; Payment Gateway
                   </div>
-                  <div className="flex gap-2 text-[11px]">
-                    <button
-                      onClick={() => setActiveTab("api")}
-                      className={`px-2 py-0.5 rounded transition ${
-                        activeTab === "api"
-                          ? "bg-teal-500/20 text-teal-300 border border-teal-500/30"
-                          : "text-zinc-500 hover:text-zinc-300"
-                      }`}
-                    >
-                      api_router.ts
-                    </button>
-                    <button
-                      onClick={() => setActiveTab("auth")}
-                      className={`px-2 py-0.5 rounded transition ${
-                        activeTab === "auth"
-                          ? "bg-teal-500/20 text-teal-300 border border-teal-500/30"
-                          : "text-zinc-500 hover:text-zinc-300"
-                      }`}
-                    >
-                      security_layer.rs
-                    </button>
-                    <button
-                      onClick={() => setActiveTab("db")}
-                      className={`px-2 py-0.5 rounded transition ${
-                        activeTab === "db"
-                          ? "bg-teal-500/20 text-teal-300 border border-teal-500/30"
-                          : "text-zinc-500 hover:text-zinc-300"
-                      }`}
-                    >
-                      schema.sql
-                    </button>
-                  </div>
+                  <p className="text-xs text-slate-500">
+                    Koneksi otomatis ke Midtrans, Xendit, WhatsApp API resmi, dan ERP akuntansi.
+                  </p>
                 </div>
-
-                {activeTab === "api" && (
-                  <div className="text-zinc-300 space-y-1 text-[11px] overflow-x-auto">
-                    <p className="text-zinc-500">// High-throughput business pipeline</p>
-                    <p>
-                      <span className="text-purple-400">export const</span>{" "}
-                      <span className="text-teal-300">runtime</span> ={" "}
-                      <span className="text-emerald-300">&apos;edge&apos;</span>;
-                    </p>
-                    <p>
-                      <span className="text-purple-400">export async function</span>{" "}
-                      <span className="text-blue-400">processOrder</span>(
-                      <span className="text-orange-300">payload</span>:{" "}
-                      <span className="text-teal-300">SecureTransaction</span>) &#123;
-                    </p>
-                    <p className="pl-4 text-zinc-400">
-                      <span className="text-purple-400">const</span> verified ={" "}
-                      <span className="text-purple-400">await</span> engine.verifyHMAC(payload);
-                    </p>
-                    <p className="pl-4 text-zinc-400">
-                      <span className="text-purple-400">return</span> Response.json(&#123; status:{" "}
-                      <span className="text-emerald-400">&apos;OK&apos;</span>, latencyMs: 12 &#125;);
-                    </p>
-                    <p>&#125;</p>
+                <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200/70 space-y-1">
+                  <div className="text-xs font-bold text-slate-900 flex items-center gap-1.5">
+                    <Check className="w-3.5 h-3.5 text-brand-600 stroke-[3]" />
+                    Arsitektur Aman &amp; Modular
                   </div>
-                )}
-
-                {activeTab === "auth" && (
-                  <div className="text-zinc-300 space-y-1 text-[11px] overflow-x-auto">
-                    <p className="text-zinc-500">// Token Shield & Rate Limiting</p>
-                    <p className="text-purple-400">fn validate_token(req: &amp;Request) -&gt; Result&lt;Claims, AuthError&gt; &#123;</p>
-                    <p className="pl-4 text-zinc-400">rate_limiter.check_ip(req.client_ip())?;</p>
-                    <p className="pl-4 text-zinc-400">jwt::decode_with_argon2(req.bearer_token())</p>
-                    <p className="text-purple-400">&#125;</p>
-                  </div>
-                )}
-
-                {activeTab === "db" && (
-                  <div className="text-zinc-300 space-y-1 text-[11px] overflow-x-auto">
-                    <p className="text-zinc-500">-- Automated Partitioning &amp; Indexing</p>
-                    <p className="text-teal-300">CREATE TABLE enterprise_ledger (</p>
-                    <p className="pl-4 text-zinc-400">id UUID PRIMARY KEY DEFAULT gen_random_uuid(),</p>
-                    <p className="pl-4 text-zinc-400">amount NUMERIC(18,4) NOT NULL, metadata JSONB,</p>
-                    <p className="pl-4 text-zinc-400">created_at TIMESTAMPTZ DEFAULT clock_timestamp()</p>
-                    <p className="text-teal-300">) PARTITION BY RANGE (created_at);</p>
-                  </div>
-                )}
+                  <p className="text-xs text-slate-500">
+                    Clean code, role-based access control (RBAC), dan database teroptimasi untuk performa tinggi.
+                  </p>
+                </div>
               </div>
             </div>
 
-            <div className="flex flex-wrap items-center justify-between pt-4 border-t border-white/5 gap-3">
-              <div className="flex items-center gap-4 text-xs text-zinc-400 font-light">
-                <span className="flex items-center gap-1.5">
-                  <CheckCircle2 className="w-3.5 h-3.5 text-teal-400" />
-                  REST &amp; gRPC API
-                </span>
-                <span className="flex items-center gap-1.5">
-                  <CheckCircle2 className="w-3.5 h-3.5 text-teal-400" />
-                  Payment Gateway
-                </span>
-                <span className="flex items-center gap-1.5">
-                  <CheckCircle2 className="w-3.5 h-3.5 text-teal-400" />
-                  ERP / CRM Custom
-                </span>
-              </div>
-
+            <div className="flex flex-wrap items-center justify-between pt-4 border-t border-slate-100 gap-3">
+              <span className="text-xs font-medium text-slate-500">
+                Deliverable: Full Source Code, Dokumentasi Teknis, &amp; Garansi Bug-Free
+              </span>
               <Link
-                href="#contact?service=custom-software"
-                className="inline-flex items-center gap-1.5 text-xs font-medium text-white hover:text-teal-300 group-hover:translate-x-0.5 transition"
+                href="#contact"
+                className="inline-flex items-center gap-1.5 text-xs font-bold text-brand-700 hover:text-brand-900 group-hover:translate-x-0.5 transition"
               >
-                <span>Konsultasi Arsitektur</span>
-                <ArrowUpRight className="w-3.5 h-3.5 text-teal-400" />
+                <span>Konsultasikan Kebutuhan Software</span>
+                <ArrowUpRight className="w-4 h-4" />
               </Link>
             </div>
           </div>
 
-          {/* Card 2: Jasa Pembuatan WebView Android (4-col) */}
-          <div className="lg:col-span-4 bento-card p-8 flex flex-col justify-between group">
+          {/* Card 2: Jasa Pembuatan WebView Android (4 Cols) */}
+          <div className="lg:col-span-4 enterprise-card rounded-2xl p-8 flex flex-col justify-between group">
             <div>
               <div className="flex items-center justify-between mb-6">
                 <div className="flex items-center gap-3">
-                  <div className="p-2.5 rounded-xl bg-cyan-500/10 border border-cyan-500/20 text-cyan-400">
-                    <Layers className="w-5 h-5" />
+                  <div className="p-3 rounded-xl bg-cyan-50 border border-cyan-200/80 text-cyan-700 group-hover:bg-cyan-600 group-hover:text-white transition-all">
+                    <Layers className="w-6 h-6" />
                   </div>
                   <div>
-                    <span className="text-xs font-mono uppercase tracking-wider text-cyan-400">
-                      Mobile Conversion
+                    <span className="text-xs font-mono uppercase tracking-wider text-cyan-700 font-semibold">
+                      Play Store Ready
                     </span>
-                    <h3 className="text-lg font-medium text-white">
-                      WebView Android Studio
+                    <h3 className="text-xl font-bold text-slate-900">
+                      Jasa WebView Android
                     </h3>
                   </div>
                 </div>
-                <span className="font-mono text-xs text-zinc-500 font-semibold bg-zinc-900/80 px-2.5 py-1 rounded-md border border-white/5">
+                <span className="font-mono text-xs text-slate-400 font-semibold bg-slate-100 px-3 py-1 rounded-md">
                   02 / 06
                 </span>
               </div>
 
-              <p className="text-xs text-zinc-400 font-light leading-relaxed mb-6">
-                Ubah website/web-app Anda menjadi aplikasi Android APK &amp; AAB resmi siap rilis Google Play Store.
+              <p className="text-xs text-slate-600 leading-relaxed mb-5">
+                Konversi website atau web-application Anda menjadi aplikasi Android resmi (APK &amp; AAB) yang siap dirilis ke Google Play Store dalam hitungan hari kerja.
               </p>
 
-              {/* Interactive Phone Feature Switcher */}
-              <div className="rounded-xl bg-zinc-950/90 border border-white/10 p-4 mb-6">
-                <div className="text-[11px] font-mono text-zinc-400 mb-2">Native Capabilities:</div>
+              {/* Native Capabilities Switcher */}
+              <div className="rounded-xl bg-slate-50 border border-slate-200/80 p-4 mb-6">
+                <div className="text-[11px] font-mono text-slate-600 mb-2 font-semibold">
+                  Fitur Native Termasuk:
+                </div>
                 <div className="grid grid-cols-3 gap-1.5 mb-3">
                   <button
                     onClick={() => setWebViewFeature("notif")}
-                    className={`px-2 py-1.5 rounded-lg text-[11px] font-medium flex items-center justify-center gap-1 transition ${
+                    className={`px-2 py-1.5 rounded-lg text-xs font-medium flex items-center justify-center gap-1 transition ${
                       webViewFeature === "notif"
-                        ? "bg-cyan-500/20 text-cyan-300 border border-cyan-500/30"
-                        : "bg-white/5 text-zinc-400 hover:text-white"
+                        ? "bg-brand-600 text-white shadow-sm"
+                        : "bg-white text-slate-600 border border-slate-200"
                     }`}
                   >
-                    <Bell className="w-3 h-3" />
-                    <span>Push</span>
+                    <Bell className="w-3.5 h-3.5" />
+                    <span>Notif</span>
                   </button>
                   <button
                     onClick={() => setWebViewFeature("cam")}
-                    className={`px-2 py-1.5 rounded-lg text-[11px] font-medium flex items-center justify-center gap-1 transition ${
+                    className={`px-2 py-1.5 rounded-lg text-xs font-medium flex items-center justify-center gap-1 transition ${
                       webViewFeature === "cam"
-                        ? "bg-cyan-500/20 text-cyan-300 border border-cyan-500/30"
-                        : "bg-white/5 text-zinc-400 hover:text-white"
+                        ? "bg-brand-600 text-white shadow-sm"
+                        : "bg-white text-slate-600 border border-slate-200"
                     }`}
                   >
-                    <Camera className="w-3 h-3" />
-                    <span>Camera</span>
+                    <Camera className="w-3.5 h-3.5" />
+                    <span>Kamera</span>
                   </button>
                   <button
                     onClick={() => setWebViewFeature("offline")}
-                    className={`px-2 py-1.5 rounded-lg text-[11px] font-medium flex items-center justify-center gap-1 transition ${
+                    className={`px-2 py-1.5 rounded-lg text-xs font-medium flex items-center justify-center gap-1 transition ${
                       webViewFeature === "offline"
-                        ? "bg-cyan-500/20 text-cyan-300 border border-cyan-500/30"
-                        : "bg-white/5 text-zinc-400 hover:text-white"
+                        ? "bg-brand-600 text-white shadow-sm"
+                        : "bg-white text-slate-600 border border-slate-200"
                     }`}
                   >
-                    <FolderUp className="w-3 h-3" />
+                    <FolderUp className="w-3.5 h-3.5" />
                     <span>Upload</span>
                   </button>
                 </div>
 
-                <div className="text-[11px] font-mono text-zinc-300 bg-zinc-900/60 p-2.5 rounded-lg border border-white/5">
+                <div className="text-xs text-slate-700 bg-white p-3 rounded-lg border border-slate-200 font-medium">
                   {webViewFeature === "notif" && (
-                    <span className="text-teal-300">✓ OneSignal &amp; Firebase Cloud Messaging terintegrasi</span>
+                    <span className="text-brand-800">✓ Push Notification OneSignal / Firebase terpasang aktif</span>
                   )}
                   {webViewFeature === "cam" && (
-                    <span className="text-cyan-300">✓ Permission Handler kamera &amp; barcode scanning support</span>
+                    <span className="text-cyan-800">✓ Izin kamera &amp; barcode scanner otomatis tertangani</span>
                   )}
                   {webViewFeature === "offline" && (
-                    <span className="text-purple-300">✓ Multi-file picker &amp; offline custom fallback page</span>
+                    <span className="text-slate-800">✓ File uploader, splash screen &amp; layar offline fallback custom</span>
                   )}
                 </div>
               </div>
             </div>
 
-            <div className="pt-4 border-t border-white/5 flex items-center justify-between">
-              <span className="text-xs font-mono text-cyan-400">
-                Turnaround: 1-2 Hari
+            <div className="pt-4 border-t border-slate-100 flex items-center justify-between">
+              <span className="text-xs font-semibold text-brand-700 bg-brand-50 px-2.5 py-1 rounded-md border border-brand-200/60">
+                Pengerjaan: 1–2 Hari
               </span>
               <Link
                 href="#estimator"
-                className="inline-flex items-center gap-1 text-xs font-medium text-white hover:text-cyan-300 transition"
+                className="inline-flex items-center gap-1 text-xs font-bold text-slate-800 hover:text-brand-700 transition"
               >
-                <span>Estimasi Biaya</span>
-                <ArrowUpRight className="w-3.5 h-3.5 text-cyan-400" />
+                <span>Estimasi Paket</span>
+                <ArrowUpRight className="w-4 h-4" />
               </Link>
             </div>
           </div>
 
-          {/* Card 3: Kelola Server & DevOps Hardening (4-col) */}
-          <div className="lg:col-span-4 bento-card p-8 flex flex-col justify-between group">
+          {/* Card 3: Company Profile Korporat (4 Cols) */}
+          <div className="lg:col-span-4 enterprise-card rounded-2xl p-8 flex flex-col justify-between group">
             <div>
               <div className="flex items-center justify-between mb-6">
                 <div className="flex items-center gap-3">
-                  <div className="p-2.5 rounded-xl bg-purple-500/10 border border-purple-500/20 text-purple-400">
-                    <Server className="w-5 h-5" />
+                  <div className="p-3 rounded-xl bg-emerald-50 border border-emerald-200/80 text-emerald-700 group-hover:bg-emerald-600 group-hover:text-white transition-all">
+                    <Globe className="w-6 h-6" />
                   </div>
                   <div>
-                    <span className="text-xs font-mono uppercase tracking-wider text-purple-400">
-                      DevOps &amp; Cloud
+                    <span className="text-xs font-mono uppercase tracking-wider text-emerald-700 font-semibold">
+                      Branding &amp; Konversi
                     </span>
-                    <h3 className="text-lg font-medium text-white">
-                      Kelola Server &amp; Hardening
-                    </h3>
-                  </div>
-                </div>
-                <span className="font-mono text-xs text-zinc-500 font-semibold bg-zinc-900/80 px-2.5 py-1 rounded-md border border-white/5">
-                  03 / 06
-                </span>
-              </div>
-
-              <p className="text-xs text-zinc-400 font-light leading-relaxed mb-6">
-                Manajemen VPS/Dedicated server (Ubuntu/Debian) dengan Nginx, Docker, UFW firewall, dan daily encrypted backup.
-              </p>
-
-              {/* Server Status Indicators */}
-              <div className="space-y-2 mb-6 text-xs font-mono">
-                <div className="flex items-center justify-between p-2.5 rounded-lg bg-zinc-950/80 border border-white/5">
-                  <span className="text-zinc-400 flex items-center gap-2">
-                    <Lock className="w-3.5 h-3.5 text-emerald-400" /> SSH Key &amp; Fail2ban
-                  </span>
-                  <span className="text-emerald-400 font-semibold">Active</span>
-                </div>
-                <div className="flex items-center justify-between p-2.5 rounded-lg bg-zinc-950/80 border border-white/5">
-                  <span className="text-zinc-400 flex items-center gap-2">
-                    <Zap className="w-3.5 h-3.5 text-teal-400" /> Nginx / Caddy Proxy
-                  </span>
-                  <span className="text-teal-400 font-semibold">Tuned</span>
-                </div>
-                <div className="flex items-center justify-between p-2.5 rounded-lg bg-zinc-950/80 border border-white/5">
-                  <span className="text-zinc-400 flex items-center gap-2">
-                    <HardDrive className="w-3.5 h-3.5 text-purple-400" /> Backup Automasi
-                  </span>
-                  <span className="text-purple-400 font-semibold">Daily Sync</span>
-                </div>
-              </div>
-            </div>
-
-            <div className="pt-4 border-t border-white/5 flex items-center justify-between">
-              <span className="text-xs font-mono text-purple-400">
-                SLA Uptime 99.9%
-              </span>
-              <Link
-                href="#contact?service=server-devops"
-                className="inline-flex items-center gap-1 text-xs font-medium text-white hover:text-purple-300 transition"
-              >
-                <span>Setup Server</span>
-                <ArrowUpRight className="w-3.5 h-3.5 text-purple-400" />
-              </Link>
-            </div>
-          </div>
-
-          {/* Card 4: Company Profile & Modern Web SSR (4-col) */}
-          <div className="lg:col-span-4 bento-card p-8 flex flex-col justify-between group">
-            <div>
-              <div className="flex items-center justify-between mb-6">
-                <div className="flex items-center gap-3">
-                  <div className="p-2.5 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-400">
-                    <Globe className="w-5 h-5" />
-                  </div>
-                  <div>
-                    <span className="text-xs font-mono uppercase tracking-wider text-emerald-400">
-                      High-Speed Web
-                    </span>
-                    <h3 className="text-lg font-medium text-white">
+                    <h3 className="text-xl font-bold text-slate-900">
                       Company Profile Modern
                     </h3>
                   </div>
                 </div>
-                <span className="font-mono text-xs text-zinc-500 font-semibold bg-zinc-900/80 px-2.5 py-1 rounded-md border border-white/5">
-                  04 / 06
+                <span className="font-mono text-xs text-slate-400 font-semibold bg-slate-100 px-3 py-1 rounded-md">
+                  03 / 06
                 </span>
               </div>
 
-              <p className="text-xs text-zinc-400 font-light leading-relaxed mb-6">
-                Landing page dan web profil korporat dengan performa cepat, struktur rapi, dan pengalaman yang konsisten di semua perangkat.
+              <p className="text-xs text-slate-600 leading-relaxed mb-6">
+                Website profil korporat dengan visual eksklusif, kecepatan loading sekejap, struktur SEO on-page optimal, dan terhubung langsung ke WhatsApp tim sales Anda.
               </p>
 
-              {/* Lighthouse Score Showcase */}
-              <div className="p-4 rounded-xl bg-zinc-950/80 border border-white/10 mb-6 flex items-center justify-around">
-                <div className="text-center">
-                  <div className="w-11 h-11 rounded-full border-2 border-emerald-400 text-emerald-400 flex items-center justify-center font-mono font-bold text-sm mx-auto mb-1">
-                    100
-                  </div>
-                  <span className="text-[10px] font-mono text-zinc-400 uppercase">Performance</span>
+              <div className="space-y-2 mb-6 text-xs text-slate-700 font-medium">
+                <div className="flex items-center gap-2">
+                  <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
+                  <span>Skor Google Core Web Vitals 95+ (Cepat &amp; Ringan)</span>
                 </div>
-                <div className="text-center">
-                  <div className="w-11 h-11 rounded-full border-2 border-emerald-400 text-emerald-400 flex items-center justify-center font-mono font-bold text-sm mx-auto mb-1">
-                    100
-                  </div>
-                  <span className="text-[10px] font-mono text-zinc-400 uppercase">SEO Rank</span>
+                <div className="flex items-center gap-2">
+                  <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
+                  <span>Optimasi Mobile &amp; Desain Eksklusif Sesuai Brand</span>
                 </div>
-                <div className="text-center">
-                  <div className="w-11 h-11 rounded-full border-2 border-emerald-400 text-emerald-400 flex items-center justify-center font-mono font-bold text-sm mx-auto mb-1">
-                    100
-                  </div>
-                  <span className="text-[10px] font-mono text-zinc-400 uppercase">Best Practice</span>
+                <div className="flex items-center gap-2">
+                  <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
+                  <span>Schema Markup JSON-LD &amp; Dynamic Meta Tags</span>
                 </div>
               </div>
             </div>
 
-            <div className="pt-4 border-t border-white/5 flex items-center justify-between">
-              <span className="text-xs font-mono text-emerald-400">
-                Core Web Vitals &lt; 0.8s
+            <div className="pt-4 border-t border-slate-100 flex items-center justify-between">
+              <span className="text-xs font-semibold text-emerald-800 bg-emerald-50 px-2.5 py-1 rounded-md border border-emerald-200/60">
+                Pengerjaan: 3–5 Hari
               </span>
               <Link
-                href="#contact?service=company-profile"
-                className="inline-flex items-center gap-1 text-xs font-medium text-white hover:text-emerald-300 transition"
+                href="#contact"
+                className="inline-flex items-center gap-1 text-xs font-bold text-slate-800 hover:text-emerald-700 transition"
               >
-                <span>Mulai Proyek Web</span>
-                <ArrowUpRight className="w-3.5 h-3.5 text-emerald-400" />
+                <span>Pesan Website</span>
+                <ArrowUpRight className="w-4 h-4" />
               </Link>
             </div>
           </div>
 
-          {/* Card 5: Custom Android Apps (4-col) */}
-          <div className="lg:col-span-4 bento-card p-8 flex flex-col justify-between group">
+          {/* Card 4: Custom Android Apps Native (4 Cols) */}
+          <div className="lg:col-span-4 enterprise-card rounded-2xl p-8 flex flex-col justify-between group">
             <div>
               <div className="flex items-center justify-between mb-6">
                 <div className="flex items-center gap-3">
-                  <div className="p-2.5 rounded-xl bg-orange-500/10 border border-orange-500/20 text-orange-400">
-                    <Smartphone className="w-5 h-5" />
+                  <div className="p-3 rounded-xl bg-orange-50 border border-orange-200/80 text-orange-700 group-hover:bg-orange-600 group-hover:text-white transition-all">
+                    <Smartphone className="w-6 h-6" />
                   </div>
                   <div>
-                    <span className="text-xs font-mono uppercase tracking-wider text-orange-400">
+                    <span className="text-xs font-mono uppercase tracking-wider text-orange-700 font-semibold">
                       Mobile Engineering
                     </span>
-                    <h3 className="text-lg font-medium text-white">
-                      Custom Android Native
+                    <h3 className="text-xl font-bold text-slate-900">
+                      Custom Android Apps
                     </h3>
                   </div>
                 </div>
-                <span className="font-mono text-xs text-zinc-500 font-semibold bg-zinc-900/80 px-2.5 py-1 rounded-md border border-white/5">
-                  05 / 06
+                <span className="font-mono text-xs text-slate-400 font-semibold bg-slate-100 px-3 py-1 rounded-md">
+                  04 / 06
                 </span>
               </div>
 
-              <p className="text-xs text-zinc-400 font-light leading-relaxed mb-6">
-                Aplikasi Android Kotlin / Flutter dengan UI responsif, arsitektur MVVM / Clean Architecture, dan sinkronisasi offline.
+              <p className="text-xs text-slate-600 leading-relaxed mb-6">
+                Pembuatan aplikasi Android native (Kotlin) atau cross-platform (Flutter) dengan performa stabil, animasi mulus 60-120fps, dan dukungan sinkronisasi data offline.
               </p>
 
-              <div className="space-y-2 mb-6 text-xs text-zinc-300 font-light">
+              <div className="space-y-2 mb-6 text-xs text-slate-700 font-medium">
                 <div className="flex items-center gap-2">
-                  <CheckCircle2 className="w-3.5 h-3.5 text-orange-400 shrink-0" />
-                  <span>Kotlin Coroutines &amp; Flow State Management</span>
+                  <CheckCircle2 className="w-4 h-4 text-orange-600 shrink-0" />
+                  <span>Arsitektur MVVM / Clean Architecture Teruji</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <CheckCircle2 className="w-3.5 h-3.5 text-orange-400 shrink-0" />
-                  <span>SQLite / Room Offline-First Database</span>
+                  <CheckCircle2 className="w-4 h-4 text-orange-600 shrink-0" />
+                  <span>Database Lokal Room / SQLite Offline-First</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <CheckCircle2 className="w-3.5 h-3.5 text-orange-400 shrink-0" />
-                  <span>Google Play App Signing &amp; Publish Support</span>
+                  <CheckCircle2 className="w-4 h-4 text-orange-600 shrink-0" />
+                  <span>Dukungan Upload &amp; Review Google Play Store</span>
                 </div>
               </div>
             </div>
 
-            <div className="pt-4 border-t border-white/5 flex items-center justify-between">
-              <span className="text-xs font-mono text-orange-400">
-                Native &amp; Cross-Platform
+            <div className="pt-4 border-t border-slate-100 flex items-center justify-between">
+              <span className="text-xs font-semibold text-orange-800 bg-orange-50 px-2.5 py-1 rounded-md border border-orange-200/60">
+                Skalabilitas Tinggi
               </span>
               <Link
-                href="#contact?service=android-apps"
-                className="inline-flex items-center gap-1 text-xs font-medium text-white hover:text-orange-300 transition"
+                href="#contact"
+                className="inline-flex items-center gap-1 text-xs font-bold text-slate-800 hover:text-orange-700 transition"
               >
                 <span>Konsultasi App</span>
-                <ArrowUpRight className="w-3.5 h-3.5 text-orange-400" />
+                <ArrowUpRight className="w-4 h-4" />
+              </Link>
+            </div>
+          </div>
+
+          {/* Card 5: Kelola Server & DevOps Hardening (4 Cols) */}
+          <div className="lg:col-span-4 enterprise-card rounded-2xl p-8 flex flex-col justify-between group">
+            <div>
+              <div className="flex items-center justify-between mb-6">
+                <div className="flex items-center gap-3">
+                  <div className="p-3 rounded-xl bg-purple-50 border border-purple-200/80 text-purple-700 group-hover:bg-purple-600 group-hover:text-white transition-all">
+                    <Server className="w-6 h-6" />
+                  </div>
+                  <div>
+                    <span className="text-xs font-mono uppercase tracking-wider text-purple-700 font-semibold">
+                      DevOps &amp; Security
+                    </span>
+                    <h3 className="text-xl font-bold text-slate-900">
+                      Kelola Server &amp; DevOps
+                    </h3>
+                  </div>
+                </div>
+                <span className="font-mono text-xs text-slate-400 font-semibold bg-slate-100 px-3 py-1 rounded-md">
+                  05 / 06
+                </span>
+              </div>
+
+              <p className="text-xs text-slate-600 leading-relaxed mb-6">
+                Setup, konfigurasi keamanan, tuning kecepatan, dan pemeliharaan server VPS / Dedicated (Ubuntu, Debian, AlmaLinux) untuk menjamin uptime bisnis Anda.
+              </p>
+
+              {/* Status checklist */}
+              <div className="space-y-2 mb-6 text-xs font-mono">
+                <div className="flex items-center justify-between p-2.5 rounded-lg bg-slate-50 border border-slate-200">
+                  <span className="text-slate-600 flex items-center gap-2">
+                    <Lock className="w-3.5 h-3.5 text-emerald-600" /> Hardening &amp; Fail2ban
+                  </span>
+                  <span className="text-emerald-700 font-bold">Secure</span>
+                </div>
+                <div className="flex items-center justify-between p-2.5 rounded-lg bg-slate-50 border border-slate-200">
+                  <span className="text-slate-600 flex items-center gap-2">
+                    <Zap className="w-3.5 h-3.5 text-brand-600" /> Nginx / Reverse Proxy
+                  </span>
+                  <span className="text-brand-700 font-bold">Tuned</span>
+                </div>
+                <div className="flex items-center justify-between p-2.5 rounded-lg bg-slate-50 border border-slate-200">
+                  <span className="text-slate-600 flex items-center gap-2">
+                    <HardDrive className="w-3.5 h-3.5 text-purple-600" /> Automated Daily Backup
+                  </span>
+                  <span className="text-purple-700 font-bold">Active</span>
+                </div>
+              </div>
+            </div>
+
+            <div className="pt-4 border-t border-slate-100 flex items-center justify-between">
+              <span className="text-xs font-semibold text-purple-800 bg-purple-50 px-2.5 py-1 rounded-md border border-purple-200/60">
+                SLA Uptime 99.9%
+              </span>
+              <Link
+                href="#contact"
+                className="inline-flex items-center gap-1 text-xs font-bold text-slate-800 hover:text-purple-700 transition"
+              >
+                <span>Kelola Server</span>
+                <ArrowUpRight className="w-4 h-4" />
               </Link>
             </div>
           </div>
