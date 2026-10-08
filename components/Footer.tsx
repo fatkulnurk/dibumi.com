@@ -82,10 +82,10 @@ export default function Footer() {
             <ul className="space-y-2 text-slate-600">
               <li>
                 <a
-                  href="mailto:halo@dibumi.com"
+                  href="mailto:fatkul@dibumi.com"
                   className="hover:text-brand-700 transition-colors"
                 >
-                  halo@dibumi.com
+                  fatkul@dibumi.com
                 </a>
               </li>
               <li>
