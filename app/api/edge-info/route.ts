@@ -9,6 +9,6 @@ export async function GET(request: Request) {
     datacenter: colo,
     country: ipCountry,
     timestamp: new Date().toISOString(),
-    runtime: "Cloudflare Pages Edge Runtime",
+    runtime: "Cloudflare Workers Runtime",
   });
 }

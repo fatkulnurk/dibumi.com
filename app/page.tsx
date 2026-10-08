@@ -1,26 +1,22 @@
 import React from "react";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
-import Ticker from "@/components/Ticker";
-import BentoServices from "@/components/BentoServices";
+import Services from "@/components/Services";
 import WorkflowMethodology from "@/components/WorkflowMethodology";
-import ProjectEstimator from "@/components/ProjectEstimator";
-import ImpactMetrics from "@/components/ImpactMetrics";
+import Standards from "@/components/Standards";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 
 export default function HomePage() {
   return (
-    <main className="min-h-screen flex flex-col justify-between selection:bg-brand-100 selection:text-brand-900 bg-enterprise-pattern">
+    <main className="min-h-screen flex flex-col justify-between selection:bg-brand-100 selection:text-brand-900">
       <Navbar />
 
       <div className="flex-grow">
         <Hero />
-        <Ticker />
-        <BentoServices />
+        <Services />
         <WorkflowMethodology />
-        <ProjectEstimator />
-        <ImpactMetrics />
+        <Standards />
         <ContactSection />
       </div>
 
