@@ -19,6 +19,7 @@
 /.wrangler
 /.open-next
 /.worker-next
+preview-output.txt
 
 # misc
 .DS_Store
