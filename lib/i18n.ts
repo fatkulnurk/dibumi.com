@@ -33,6 +33,12 @@ export type SiteContent = {
     points: string[];
   }[];
   servicesSection: { title: string; description: string; consult: string };
+  platforms: {
+    title: string;
+    description: string;
+    names: string[];
+    disclaimer: string;
+  };
   workflow: {
     title: string;
     description: string;
@@ -78,6 +84,7 @@ const id: SiteContent = {
   nav: { services: "Layanan", process: "Proses", standards: "Standar", contact: "Kontak", consultation: "Konsultasi", menu: "Menu Navigasi" },
   hero: { eyebrow: "Software house & konsultan IT di Surabaya", title: "Teknologi untuk bisnis yang terus tumbuh.", description: "Kami merancang software, aplikasi, dan website yang menyederhanakan pekerjaan dan mendukung langkah bisnis berikutnya.", consultation: "Konsultasi", services: "Lihat layanan", imageAlt: "Ruang kerja pengembangan software dengan laptop dan perangkat teknologi", caption: "Solusi digital, dirancang dengan cermat." },
   servicesSection: { title: "Layanan yang kami kerjakan", description: "Dikerjakan langsung oleh software engineer berpengalaman, dari sistem inti perusahaan hingga infrastruktur server.", consult: "Konsultasikan" },
+  platforms: { title: "Platform dan kanal yang pernah digunakan", description: "Beberapa nama dari ekosistem digital yang pernah kami gunakan atau temui dalam pekerjaan dan eksplorasi teknis.", names: ["UC Browser / UCWeb", "BuzzCity", "PropellerAds", "Zeedsharia", "Motmaina.com"], disclaimer: "Nama ditampilkan sebagai referensi platform atau kanal yang pernah digunakan. Bagian ini bukan daftar klien atau mitra, dan tidak menyatakan endorsement, afiliasi, atau hubungan resmi dengan entitas yang disebutkan." },
   services: [
     { title: "Custom Software Development", description: "Perangkat lunak kustom sesuai workflow bisnis Anda, dari automasi internal hingga ERP dan CRM modular.", points: ["Integrasi API & payment gateway", "Arsitektur aman & modular"] },
     { title: "Jasa WebView Android", description: "Konversi website menjadi aplikasi Android resmi yang siap rilis ke Google Play Store.", points: ["Play Store ready", "Pengerjaan 1–2 hari"] },
@@ -110,6 +117,7 @@ const en: SiteContent = {
   nav: { services: "Services", process: "Process", standards: "Standards", contact: "Contact", consultation: "Consultation", menu: "Navigation Menu" },
   hero: { eyebrow: "Software house & IT consultant in Surabaya", title: "Technology for businesses that keep growing.", description: "We design software, applications, and websites that simplify work and support your next business move.", consultation: "Consultation", services: "View services", imageAlt: "Software development workspace with a laptop and technology equipment", caption: "Digital solutions, carefully designed." },
   servicesSection: { title: "What we do", description: "Built directly by experienced software engineers, from core business systems to server infrastructure.", consult: "Discuss a project" },
+  platforms: { title: "Platforms and channels we have used", description: "A selection of names from the digital ecosystem that we have used or encountered through work and technical exploration.", names: ["UC Browser / UCWeb", "BuzzCity", "PropellerAds", "Zeedsharia", "Motmaina.com"], disclaimer: "Names are shown only as references to platforms or channels that have been used. This is not a client or partner list and does not state endorsement, affiliation, or an official relationship with any named entity." },
   services: [
     { title: "Custom Software Development", description: "Custom software for your workflow, from internal automation to modular ERP and CRM platforms.", points: ["API & payment gateway integration", "Secure, modular architecture"] },
     { title: "Android WebView Services", description: "Turn your website into an official Android app ready for the Google Play Store.", points: ["Play Store ready", "1–2 day delivery"] },
@@ -142,6 +150,7 @@ const ar: SiteContent = {
   nav: { services: "الخدمات", process: "المنهجية", standards: "المعايير", contact: "تواصل معنا", consultation: "استشارة", menu: "قائمة التنقل" },
   hero: { eyebrow: "شركة برمجيات واستشارات تقنية في سورابايا", title: "تقنية تساعد أعمالك على النمو المستمر.", description: "نصمم البرمجيات والتطبيقات والمواقع التي تبسّط العمل وتدعم خطوتك التجارية القادمة.", consultation: "احجز استشارة", services: "استكشف الخدمات", imageAlt: "مساحة عمل لتطوير البرمجيات تضم حاسوباً ومعدات تقنية", caption: "حلول رقمية مصممة بعناية." },
   servicesSection: { title: "ما نقدمه", description: "ينفذها مهندسو برمجيات ذوو خبرة، من الأنظمة الأساسية إلى البنية التحتية للخوادم.", consult: "ناقش مشروعك" },
+  platforms: { title: "منصات وقنوات سبق استخدامها", description: "مجموعة من الأسماء ضمن منظومة رقمية سبق أن استخدمناها أو صادفناها أثناء العمل والاستكشاف التقني.", names: ["UC Browser / UCWeb", "BuzzCity", "PropellerAds", "Zeedsharia", "Motmaina.com"], disclaimer: "تُعرض الأسماء كمرجع فقط إلى منصات أو قنوات سبق استخدامها. هذا القسم ليس قائمة عملاء أو شركاء، ولا يفيد بوجود تأييد أو ارتباط أو علاقة رسمية مع أي جهة مذكورة." },
   services: [
     { title: "تطوير برمجيات مخصصة", description: "برمجيات مخصصة لسير عملك، من الأتمتة الداخلية إلى منصات ERP وCRM المرنة.", points: ["تكامل API وبوابات الدفع", "بنية آمنة ومرنة"] },
     { title: "خدمات Android WebView", description: "حوّل موقعك إلى تطبيق Android رسمي جاهز للنشر على Google Play.", points: ["جاهز للمتجر", "تسليم خلال يوم أو يومين"] },
@@ -174,6 +183,7 @@ const zh: SiteContent = {
   nav: { services: "服务", process: "流程", standards: "标准", contact: "联系我们", consultation: "咨询", menu: "导航菜单" },
   hero: { eyebrow: "泗水软件公司与 IT 咨询服务", title: "让技术推动业务持续成长。", description: "我们设计软件、应用和网站，简化工作流程，支持企业的下一步发展。", consultation: "开始咨询", services: "查看服务", imageAlt: "配有笔记本电脑和技术设备的软件开发工作空间", caption: "用心设计数字化解决方案。" },
   servicesSection: { title: "我们提供的服务", description: "由经验丰富的软件工程师直接交付，从核心业务系统到服务器基础设施。", consult: "讨论项目" },
+  platforms: { title: "曾使用的平台与渠道", description: "数字生态中一些我们在工作和技术探索过程中使用过或接触过的名称。", names: ["UC Browser / UCWeb", "BuzzCity", "PropellerAds", "Zeedsharia", "Motmaina.com"], disclaimer: "这些名称仅作为曾使用过的平台或渠道的参考。本部分不是客户或合作伙伴名单，也不表示与所列实体存在认可、隶属关系或正式合作关系。" },
   services: [
     { title: "定制软件开发", description: "根据您的业务流程定制软件，从内部自动化到模块化 ERP 和 CRM 平台。", points: ["API 与支付网关集成", "安全、模块化架构"] },
     { title: "Android WebView 服务", description: "将网站转换为可发布到 Google Play 的官方 Android 应用。", points: ["支持上架 Play Store", "1–2 天交付"] },
@@ -206,6 +216,7 @@ const pl: SiteContent = {
   nav: { services: "Usługi", process: "Proces", standards: "Standardy", contact: "Kontakt", consultation: "Konsultacja", menu: "Menu nawigacji" },
   hero: { eyebrow: "Software house i konsulting IT w Surabai", title: "Technologia dla firm, które stale się rozwijają.", description: "Projektujemy oprogramowanie, aplikacje i strony internetowe, które upraszczają pracę i wspierają kolejny krok Twojej firmy.", consultation: "Konsultacja", services: "Zobacz usługi", imageAlt: "Przestrzeń pracy zespołu tworzącego oprogramowanie z laptopem i sprzętem technicznym", caption: "Rozwiązania cyfrowe zaprojektowane z dbałością." },
   servicesSection: { title: "Co robimy", description: "Realizowane bezpośrednio przez doświadczonych inżynierów oprogramowania, od systemów biznesowych po infrastrukturę serwerową.", consult: "Porozmawiaj o projekcie" },
+  platforms: { title: "Platformy i kanały, z których korzystaliśmy", description: "Wybrane nazwy z ekosystemu cyfrowego, z których korzystaliśmy lub które napotkaliśmy podczas pracy i eksploracji technicznej.", names: ["UC Browser / UCWeb", "BuzzCity", "PropellerAds", "Zeedsharia", "Motmaina.com"], disclaimer: "Nazwy są podane wyłącznie jako odniesienia do używanych platform lub kanałów. To nie jest lista klientów ani partnerów i nie oznacza poparcia, afiliacji ani oficjalnej relacji z wymienionymi podmiotami." },
   services: [
     { title: "Dedykowane oprogramowanie", description: "Oprogramowanie dopasowane do Twojego procesu, od automatyzacji po modułowe systemy ERP i CRM.", points: ["Integracje API i płatności", "Bezpieczna, modułowa architektura"] },
     { title: "Usługi Android WebView", description: "Zamieniamy stronę internetową w oficjalną aplikację Android gotową do publikacji w Google Play.", points: ["Gotowe do Play Store", "Realizacja w 1–2 dni"] },

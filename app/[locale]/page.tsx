@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Services from "@/components/Services";
+import Platforms from "@/components/Platforms";
 import WorkflowMethodology from "@/components/WorkflowMethodology";
 import Standards from "@/components/Standards";
 import ContactSection from "@/components/ContactSection";
@@ -45,6 +46,7 @@ export default async function LocalizedHomePage({ params }: LocalePageProps) {
         <div className="flex-grow">
           <Hero content={content.hero} />
           <Services content={content} />
+          <Platforms content={content.platforms} />
           <WorkflowMethodology content={content.workflow} />
           <Standards content={content.standards} />
           <ContactSection content={content.contact} />
