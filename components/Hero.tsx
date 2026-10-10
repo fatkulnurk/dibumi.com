@@ -2,14 +2,15 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
+import type { SiteContent } from "@/lib/i18n";
 
-export default function Hero() {
+export default function Hero({ content }: { content: SiteContent["hero"] }) {
   return (
     <section className="relative isolate flex min-h-[620px] items-center overflow-hidden bg-slate-950 pt-20 sm:min-h-[660px] lg:min-h-[700px]">
       <div className="absolute inset-0 -z-10 overflow-hidden" aria-hidden="true">
         <Image
           src="/images/software-workspace.jpg"
-          alt=""
+          alt={content.imageAlt}
           fill
           priority
           sizes="100vw"
@@ -23,27 +24,26 @@ export default function Hero() {
         <div className="max-w-2xl">
           <p className="mb-6 inline-flex items-center gap-3 text-sm font-medium tracking-wide text-brand-200">
             <span className="h-px w-8 bg-brand-300" aria-hidden="true" />
-            Software house &amp; konsultan IT di Surabaya
+            {content.eyebrow}
           </p>
           <h1 className="animate-fade-up text-4xl font-semibold leading-[1.1] tracking-[-0.035em] text-white motion-reduce:animate-none sm:text-5xl lg:text-6xl">
-            Teknologi untuk bisnis yang terus tumbuh.
+            {content.title}
           </h1>
           <p className="mt-6 max-w-xl text-base leading-7 text-slate-200 sm:text-lg sm:leading-8">
-            Kami merancang software, aplikasi, dan website yang menyederhanakan
-            pekerjaan dan mendukung langkah bisnis berikutnya.
+            {content.description}
           </p>
           <div className="mt-9 flex flex-col gap-3 sm:flex-row">
             <Link
               href="#contact"
               className="inline-flex min-h-12 items-center justify-center gap-2 whitespace-nowrap rounded-xl bg-brand-700 px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-brand-800 active:scale-[0.98]"
             >
-              Konsultasi <ArrowRight className="h-4 w-4" />
+              {content.consultation} <ArrowRight className="h-4 w-4" />
             </Link>
             <Link
               href="#services"
               className="inline-flex min-h-12 items-center justify-center gap-2 whitespace-nowrap rounded-xl border border-white/35 bg-white/5 px-5 py-3 text-sm font-semibold text-white transition-colors hover:border-white/60 hover:bg-white/10 active:scale-[0.98]"
             >
-              Lihat layanan <ArrowUpRight className="h-4 w-4" />
+              {content.services} <ArrowUpRight className="h-4 w-4" />
             </Link>
           </div>
         </div>

@@ -1,10 +1,11 @@
 import React from "react";
 import Link from "next/link";
+import type { SiteContent } from "@/lib/i18n";
 
-export default function Footer() {
+export default function Footer({ content }: { content: SiteContent["footer"] }) {
   return (
     <footer className="border-t border-slate-200 bg-white text-sm pt-14 pb-10">
-      <div className="max-w-6xl mx-auto px-6 sm:px-8">
+      <div className="mx-auto max-w-6xl px-6 sm:px-8">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-10 mb-14">
           <div className="md:col-span-5 space-y-4">
             <Link href="/" className="flex items-center gap-2.5 text-slate-900">
@@ -16,39 +17,36 @@ export default function Footer() {
               </span>
             </Link>
             <p className="text-slate-600 leading-relaxed max-w-sm">
-              Software house &amp; konsultan IT berbasis di Surabaya, Indonesia.
-              Kami membantu bisnis dari UKM hingga korporat membangun software
-              berkualitas tinggi, aplikasi mobile, dan infrastruktur cloud yang
-              tangguh.
+              {content.description}
             </p>
             <p className="text-slate-500 text-xs">
-              Surabaya, Jawa Timur — Indonesia
+              {content.location}
             </p>
           </div>
 
           <div className="md:col-span-3 space-y-3">
             <div className="text-sm font-semibold text-slate-900">
-              Layanan
+              {content.services}
             </div>
             <ul className="space-y-2 text-slate-600">
               <li>
                 <Link href="#services" className="hover:text-brand-700 transition-colors">
-                  Custom Software Enterprise
+                  {content.serviceLinks[0]}
                 </Link>
               </li>
               <li>
                 <Link href="#services" className="hover:text-brand-700 transition-colors">
-                  Jasa WebView Android
+                  {content.serviceLinks[1]}
                 </Link>
               </li>
               <li>
                 <Link href="#services" className="hover:text-brand-700 transition-colors">
-                  Website Company Profile
+                  {content.serviceLinks[2]}
                 </Link>
               </li>
               <li>
                 <Link href="#services" className="hover:text-brand-700 transition-colors">
-                  Kelola Server &amp; DevOps
+                  {content.serviceLinks[3]}
                 </Link>
               </li>
             </ul>
@@ -56,29 +54,29 @@ export default function Footer() {
 
           <div className="md:col-span-2 space-y-3">
             <div className="text-sm font-semibold text-slate-900">
-              Perusahaan
+              {content.company}
             </div>
             <ul className="space-y-2 text-slate-600">
               <li>
                 <Link href="#methodology" className="hover:text-brand-700 transition-colors">
-                  Metodologi
+                  {content.companyLinks[0]}
                 </Link>
               </li>
               <li>
                 <Link href="#standards" className="hover:text-brand-700 transition-colors">
-                  Standar Kerja
+                  {content.companyLinks[1]}
                 </Link>
               </li>
               <li>
                 <Link href="#contact" className="hover:text-brand-700 transition-colors">
-                  Kontak
+                  {content.companyLinks[2]}
                 </Link>
               </li>
             </ul>
           </div>
 
           <div className="md:col-span-2 space-y-3">
-            <div className="text-sm font-semibold text-slate-900">Kontak</div>
+            <div className="text-sm font-semibold text-slate-900">{content.contact}</div>
             <ul className="space-y-2 text-slate-600">
               <li>
                 <a
@@ -90,7 +88,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link href="#contact" className="hover:text-brand-700 transition-colors">
-                  Konsultasi WhatsApp
+                  {content.whatsapp}
                 </Link>
               </li>
             </ul>
@@ -99,8 +97,7 @@ export default function Footer() {
 
         <div className="pt-8 border-t border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-slate-500">
           <div>
-            © {new Date().getFullYear()} dibumi.com. Hak cipta dilindungi
-            undang-undang.
+            © {new Date().getFullYear()} dibumi.com. {content.copyright}
           </div>
           <div>Surabaya, Jawa Timur, Indonesia.</div>
         </div>
