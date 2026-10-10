@@ -40,7 +40,7 @@ export default function WorkflowMethodology() {
     >
       <div className="max-w-6xl mx-auto px-6 sm:px-8">
         <div className="mb-14 max-w-2xl">
-          <h2 className="mb-4 text-3xl font-bold leading-[1.15] tracking-tight text-slate-900 sm:text-4xl">
+          <h2 className="mb-4 text-3xl font-semibold leading-[1.15] tracking-tight text-slate-900 sm:text-4xl">
             Alur kerja yang terstruktur
           </h2>
           <p className="text-base text-slate-600 leading-relaxed">
@@ -53,15 +53,15 @@ export default function WorkflowMethodology() {
           {steps.map(({ icon: Icon, ...item }) => (
             <div key={item.step} className="border-t border-slate-300 py-6 md:py-7">
               <div className="mb-5 flex items-center justify-between">
-                <span className="flex h-10 w-10 items-center justify-center rounded-lg bg-brand-50 text-brand-800">
-                  <Icon className="h-5 w-5" strokeWidth={1.8} />
+                <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-brand-50 text-brand-800">
+                  <Icon className="h-5 w-5" strokeWidth={1.6} />
                 </span>
                 <span className="font-mono text-sm font-semibold text-slate-300">{item.step}</span>
               </div>
-              <h3 className="mb-2 text-base font-bold text-slate-900">
+              <h3 className="mb-2 text-base font-semibold text-slate-900">
                 {item.title}
               </h3>
-              <p className="text-sm text-slate-600 leading-relaxed">
+              <p className="text-sm leading-6 text-slate-600">
                 {item.description}
               </p>
             </div>

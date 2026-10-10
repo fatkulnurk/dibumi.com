@@ -30,9 +30,14 @@ export default {
           "0%": { opacity: "0", transform: "translateY(0.75rem)" },
           "100%": { opacity: "1", transform: "translateY(0)" },
         },
+        "slow-zoom": {
+          "0%, 100%": { transform: "scale(1)" },
+          "50%": { transform: "scale(1.06)" },
+        },
       },
       animation: {
         "fade-up": "fade-up 650ms cubic-bezier(0.22, 1, 0.36, 1) both",
+        "slow-zoom": "slow-zoom 24s ease-in-out infinite",
       },
     },
   },

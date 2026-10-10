@@ -15,8 +15,8 @@ export default function Navbar() {
   ];
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 border-b border-slate-200/80 bg-slate-50/95 py-3 backdrop-blur-md">
-      <div className="max-w-6xl mx-auto px-6 sm:px-8 flex items-center justify-between">
+    <header className="fixed inset-x-0 top-0 z-50 border-b border-slate-200 bg-white py-3">
+      <div className="mx-auto flex max-w-6xl items-center justify-between px-6 sm:px-8">
         {/* Brand */}
         <Link href="/" className="flex items-center gap-2.5 text-slate-900">
           <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-brand-800">
@@ -43,9 +43,9 @@ export default function Navbar() {
         {/* Desktop CTA */}
         <Link
           href="#contact"
-          className="hidden items-center gap-1.5 whitespace-nowrap rounded-lg bg-brand-800 px-4 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-brand-900 active:scale-[0.98] md:inline-flex"
+          className="hidden items-center gap-1.5 whitespace-nowrap rounded-xl bg-brand-800 px-4 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-brand-900 active:scale-[0.98] md:inline-flex"
         >
-          <span>Hubungi Kami</span>
+          <span>Konsultasi</span>
           <ArrowUpRight className="w-4 h-4" />
         </Link>
 
@@ -61,7 +61,7 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       {mobileMenuOpen && (
-        <div className="mt-3 space-y-1 border-b border-slate-200 bg-slate-50 px-6 py-5 md:hidden">
+        <div className="mt-3 space-y-1 border-b border-slate-200 bg-white px-6 py-5 md:hidden">
           {navLinks.map((link) => (
             <Link
               key={link.name}
@@ -75,9 +75,9 @@ export default function Navbar() {
           <Link
             href="#contact"
             onClick={() => setMobileMenuOpen(false)}
-            className="mt-3 inline-flex w-full items-center justify-center gap-1.5 whitespace-nowrap rounded-lg bg-brand-800 px-4 py-3 text-sm font-semibold text-white transition-colors hover:bg-brand-900 active:scale-[0.98]"
+            className="mt-3 inline-flex w-full items-center justify-center gap-1.5 whitespace-nowrap rounded-xl bg-brand-800 px-4 py-3 text-sm font-semibold text-white transition-colors hover:bg-brand-900 active:scale-[0.98]"
           >
-            <span>Hubungi Kami</span>
+            <span>Konsultasi</span>
             <ArrowUpRight className="w-4 h-4" />
           </Link>
         </div>

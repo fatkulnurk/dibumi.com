@@ -57,10 +57,10 @@ const services = [
 
 export default function Services() {
   return (
-    <section id="services" className="border-t border-slate-200 bg-white py-20 md:py-24">
+    <section id="services" className="border-t border-slate-200 bg-white py-20 md:py-28">
       <div className="max-w-6xl mx-auto px-6 sm:px-8">
-        <div className="mb-14 max-w-2xl">
-          <h2 className="mb-4 text-3xl font-bold leading-[1.15] tracking-tight text-slate-900 sm:text-4xl">
+        <div className="mb-12 max-w-2xl">
+          <h2 className="mb-4 text-3xl font-semibold leading-[1.15] tracking-tight text-slate-900 sm:text-4xl">
             Layanan yang kami kerjakan
           </h2>
           <p className="text-base text-slate-600 leading-relaxed">
@@ -69,47 +69,40 @@ export default function Services() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
-          {services.map(({ icon: Icon, ...service }, index) => (
+        <div className="grid grid-cols-1 gap-x-12 md:grid-cols-2">
+          {services.map(({ icon: Icon, ...service }) => (
             <div
               key={service.title}
-              className="group flex flex-col justify-between rounded-2xl border border-slate-200 bg-white p-6 transition-colors hover:border-brand-300 sm:p-7"
+              className="group grid grid-cols-[3rem_1fr] gap-4 border-t border-slate-200 py-7 sm:gap-5 sm:py-8"
             >
-              <div>
-                <div className="mb-5 flex items-center justify-between">
-                  <span className="flex h-11 w-11 items-center justify-center rounded-lg bg-brand-50 text-brand-800">
-                    <Icon className="h-5 w-5" strokeWidth={1.8} />
-                  </span>
-                  <span className="font-mono text-xs text-slate-300">0{index + 1}</span>
-                </div>
-                <h3 className="mb-3 text-lg font-bold text-slate-900">
+              <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-brand-50 text-brand-800 transition-colors group-hover:bg-brand-100">
+                <Icon className="h-5 w-5" strokeWidth={1.6} />
+              </span>
+              <div className="flex min-w-0 flex-col">
+                <h3 className="mb-2 text-lg font-semibold tracking-tight text-slate-900">
                   {service.title}
                 </h3>
-                <p className="mb-5 text-sm leading-relaxed text-slate-600">
+                <p className="mb-4 text-sm leading-6 text-slate-600">
                   {service.description}
                 </p>
-                <ul className="mb-6 space-y-2">
+                <ul className="mb-5 flex flex-wrap gap-x-4 gap-y-2">
                   {service.points.map((point) => (
                     <li
                       key={point}
-                      className="flex items-center gap-2 text-sm text-slate-700"
+                      className="flex items-center gap-2 text-xs font-medium text-slate-600"
                     >
-                      <span className="flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-brand-50 text-brand-700">
-                        <span className="h-1 w-1 rounded-full bg-brand-600" />
-                      </span>
+                      <span className="h-1 w-1 rounded-full bg-brand-700" />
                       {point}
                     </li>
                   ))}
                 </ul>
+                <Link
+                  href="#contact"
+                  className="mt-auto inline-flex w-fit items-center gap-1.5 text-sm font-semibold text-brand-800 transition-colors group-hover:text-brand-950"
+                >
+                  Konsultasikan <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                </Link>
               </div>
-
-              <Link
-                href="#contact"
-                className="inline-flex items-center gap-1.5 text-sm font-semibold text-brand-800 transition-colors group-hover:text-brand-950"
-              >
-                <span>Konsultasikan</span>
-                <ArrowUpRight className="w-4 h-4" />
-              </Link>
             </div>
           ))}
         </div>

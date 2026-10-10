@@ -48,7 +48,7 @@ export default function Standards() {
     <section id="standards" className="border-t border-slate-200 bg-slate-100/70 py-20 md:py-24">
       <div className="max-w-6xl mx-auto px-6 sm:px-8">
         <div className="mb-14 max-w-2xl">
-          <h2 className="mb-4 text-3xl font-bold leading-[1.15] tracking-tight text-slate-900 sm:text-4xl">
+          <h2 className="mb-4 text-3xl font-semibold leading-[1.15] tracking-tight text-slate-900 sm:text-4xl">
             Standar kerja kami
           </h2>
           <p className="text-base text-slate-600 leading-relaxed">
@@ -60,8 +60,8 @@ export default function Standards() {
         <div className="mb-14 grid grid-cols-1 gap-8 lg:grid-cols-3">
           {standards.map(({ icon: Icon, ...std }) => (
             <div key={std.title} className="border-l-2 border-brand-700 pl-5">
-              <span className="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-white text-brand-800"><Icon className="h-5 w-5" /></span>
-              <h3 className="mb-2 text-base font-bold text-slate-900">
+              <span className="mb-4 flex h-10 w-10 items-center justify-center rounded-xl bg-white text-brand-800"><Icon className="h-5 w-5" strokeWidth={1.6} /></span>
+              <h3 className="mb-2 text-base font-semibold text-slate-900">
                 {std.title}
               </h3>
               <p className="text-sm text-slate-600 leading-relaxed">
@@ -74,8 +74,8 @@ export default function Standards() {
         <div className="grid grid-cols-1 gap-8 border-t border-slate-300 pt-8 sm:grid-cols-3">
           {commitments.map(({ icon: Icon, ...item }) => (
             <div key={item.title}>
-              <div className="mb-4 flex h-9 w-9 items-center justify-center rounded-lg bg-brand-100 text-brand-800"><Icon className="h-4 w-4" /></div>
-              <h3 className="mb-2 text-sm font-bold text-slate-900">
+              <div className="mb-4 flex h-9 w-9 items-center justify-center rounded-xl bg-brand-100 text-brand-800"><Icon className="h-4 w-4" strokeWidth={1.6} /></div>
+              <h3 className="mb-2 text-sm font-semibold text-slate-900">
                 {item.title}
               </h3>
               <p className="text-sm text-slate-600 leading-relaxed">
