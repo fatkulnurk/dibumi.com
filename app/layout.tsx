@@ -60,7 +60,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="id" className={sans.variable}>
-      <body className="font-sans antialiased text-slate-900 bg-white">
+      <body className="font-sans antialiased text-slate-900 bg-slate-50">
         {children}
       </body>
     </html>

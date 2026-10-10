@@ -26,14 +26,14 @@ export default function Navbar() {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-colors duration-300 ${
-        scrolled ? "site-header py-4" : "bg-transparent py-6"
+        scrolled ? "site-header py-3" : "bg-white/55 py-5 backdrop-blur-sm"
       }`}
     >
       <div className="max-w-6xl mx-auto px-6 sm:px-8 flex items-center justify-between">
         {/* Brand */}
         <Link href="/" className="flex items-center gap-2.5 text-slate-900">
-          <span className="w-7 h-7 rounded-md bg-brand-600 flex items-center justify-center">
-            <span className="text-xs font-bold text-white">db</span>
+          <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-brand-500 to-brand-800 shadow-md shadow-brand-900/20">
+            <span className="text-xs font-extrabold tracking-tight text-white">db</span>
           </span>
           <span className="font-bold text-base tracking-tight">
             dibumi<span className="text-brand-600">.com</span>
@@ -56,7 +56,7 @@ export default function Navbar() {
         {/* Desktop CTA */}
         <Link
           href="#contact"
-          className="hidden md:inline-flex items-center gap-1.5 btn-primary text-sm font-medium px-4 py-2 rounded-lg"
+          className="btn-primary hidden items-center gap-1.5 rounded-xl px-4 py-2.5 text-sm font-semibold md:inline-flex"
         >
           <span>Hubungi Kami</span>
           <ArrowUpRight className="w-4 h-4" />
@@ -65,7 +65,7 @@ export default function Navbar() {
         {/* Mobile toggle */}
         <button
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          className="md:hidden p-2 rounded-lg text-slate-700 hover:bg-slate-100 transition-colors"
+          className="rounded-xl p-2.5 text-slate-700 transition-colors hover:bg-slate-100 md:hidden"
           aria-label="Menu Navigasi"
         >
           {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
