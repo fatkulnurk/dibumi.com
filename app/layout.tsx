@@ -59,7 +59,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="id" className={sans.variable}>
+    <html lang="id" className={`${sans.variable} scroll-smooth motion-reduce:scroll-auto`}>
       <body className="font-sans antialiased text-slate-900 bg-slate-50">
         {children}
       </body>

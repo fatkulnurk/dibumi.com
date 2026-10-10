@@ -36,11 +36,10 @@ export default function WorkflowMethodology() {
   return (
     <section
       id="methodology"
-      className="border-t border-slate-200/80 py-20 md:py-28"
+      className="border-t border-slate-200 py-20 md:py-24"
     >
       <div className="max-w-6xl mx-auto px-6 sm:px-8">
         <div className="mb-14 max-w-2xl">
-          <p className="mb-3 text-xs font-bold uppercase tracking-[0.2em] text-brand-700">Dari ide ke dampak nyata</p>
           <h2 className="mb-4 text-3xl font-bold leading-[1.15] tracking-tight text-slate-900 sm:text-4xl">
             Alur kerja yang terstruktur
           </h2>
@@ -50,11 +49,11 @@ export default function WorkflowMethodology() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 gap-x-8 md:grid-cols-2 lg:grid-cols-4">
           {steps.map(({ icon: Icon, ...item }) => (
-            <div key={item.step} className="group rounded-2xl border border-slate-200 bg-white/80 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-brand-200 hover:shadow-lg hover:shadow-slate-900/5">
+            <div key={item.step} className="border-t border-slate-300 py-6 md:py-7">
               <div className="mb-5 flex items-center justify-between">
-                <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-brand-50 text-brand-700 transition-colors group-hover:bg-brand-600 group-hover:text-white">
+                <span className="flex h-10 w-10 items-center justify-center rounded-lg bg-brand-50 text-brand-800">
                   <Icon className="h-5 w-5" strokeWidth={1.8} />
                 </span>
                 <span className="font-mono text-sm font-semibold text-slate-300">{item.step}</span>

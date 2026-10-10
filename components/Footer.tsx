@@ -8,7 +8,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-10 mb-14">
           <div className="md:col-span-5 space-y-4">
             <Link href="/" className="flex items-center gap-2.5 text-slate-900">
-              <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-brand-500 to-brand-800 shadow-md shadow-brand-900/20">
+              <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-brand-800">
                 <span className="text-xs font-extrabold tracking-tight text-white">db</span>
               </span>
               <span className="font-bold text-base tracking-tight">

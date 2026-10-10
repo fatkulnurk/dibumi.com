@@ -57,10 +57,9 @@ const services = [
 
 export default function Services() {
   return (
-    <section id="services" className="border-t border-slate-200/80 bg-white/65 py-20 md:py-28">
+    <section id="services" className="border-t border-slate-200 bg-white py-20 md:py-24">
       <div className="max-w-6xl mx-auto px-6 sm:px-8">
         <div className="mb-14 max-w-2xl">
-          <p className="mb-3 text-xs font-bold uppercase tracking-[0.2em] text-brand-700">Apa yang kami kerjakan</p>
           <h2 className="mb-4 text-3xl font-bold leading-[1.15] tracking-tight text-slate-900 sm:text-4xl">
             Layanan yang kami kerjakan
           </h2>
@@ -74,11 +73,11 @@ export default function Services() {
           {services.map(({ icon: Icon, ...service }, index) => (
             <div
               key={service.title}
-              className="service-card flex flex-col justify-between rounded-2xl border border-slate-200/90 bg-white p-6 shadow-sm sm:p-7"
+              className="group flex flex-col justify-between rounded-2xl border border-slate-200 bg-white p-6 transition-colors hover:border-brand-300 sm:p-7"
             >
               <div>
                 <div className="mb-5 flex items-center justify-between">
-                  <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-brand-50 to-cyan-50 text-brand-700 ring-1 ring-brand-100">
+                  <span className="flex h-11 w-11 items-center justify-center rounded-lg bg-brand-50 text-brand-800">
                     <Icon className="h-5 w-5" strokeWidth={1.8} />
                   </span>
                   <span className="font-mono text-xs text-slate-300">0{index + 1}</span>
@@ -106,7 +105,7 @@ export default function Services() {
 
               <Link
                 href="#contact"
-                className="inline-flex items-center gap-1.5 text-sm font-semibold text-brand-700 hover:text-brand-900 transition-colors"
+                className="inline-flex items-center gap-1.5 text-sm font-semibold text-brand-800 transition-colors group-hover:text-brand-950"
               >
                 <span>Konsultasikan</span>
                 <ArrowUpRight className="w-4 h-4" />

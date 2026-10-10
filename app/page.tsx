@@ -9,7 +9,7 @@ import Footer from "@/components/Footer";
 
 export default function HomePage() {
   return (
-    <main className="min-h-screen flex flex-col justify-between selection:bg-brand-100 selection:text-brand-900">
+    <main className="flex min-h-screen flex-col justify-between bg-slate-50 text-slate-900 selection:bg-brand-100 selection:text-brand-950">
       <Navbar />
 
       <div className="flex-grow">
