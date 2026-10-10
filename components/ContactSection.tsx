@@ -1,7 +1,7 @@
 import React from "react";
 import { MessageSquare, Mail, MapPin, Clock, ArrowUpRight } from "lucide-react";
 
-const WHATSAPP_URL = `https://wa.me/6281234567890?text=${encodeURIComponent(
+const WHATSAPP_URL = `https://wa.me/6285607100255?text=${encodeURIComponent(
   "Halo tim dibumi.com Surabaya,\n\nSaya ingin berkonsultasi mengenai kebutuhan proyek. Terima kasih!"
 )}`;
 
