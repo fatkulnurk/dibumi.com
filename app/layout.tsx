@@ -1,12 +1,32 @@
 import type { Metadata, Viewport } from "next";
-import { Manrope } from "next/font/google";
+import { IBM_Plex_Sans, IBM_Plex_Sans_Arabic, IBM_Plex_Mono, Noto_Sans_SC } from "next/font/google";
 import "./globals.css";
 
-const sans = Manrope({
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700", "800"],
+// Variable font: weight axis spans 100-700, so font-extrabold clamps to 700.
+const sans = IBM_Plex_Sans({
+  subsets: ["latin", "latin-ext"],
   display: "swap",
   variable: "--font-sans",
+});
+
+const sansArabic = IBM_Plex_Sans_Arabic({
+  subsets: ["arabic"],
+  weight: ["300", "400", "600", "700"],
+  display: "swap",
+  variable: "--font-sans-ar",
+});
+
+const sansChinese = Noto_Sans_SC({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-sans-zh",
+});
+
+const mono = IBM_Plex_Mono({
+  subsets: ["latin", "latin-ext"],
+  weight: ["400", "600"],
+  display: "swap",
+  variable: "--font-mono-plex",
 });
 
 export const metadata: Metadata = {
@@ -59,7 +79,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="id" className={`${sans.variable} scroll-smooth motion-reduce:scroll-auto`}>
+    <html
+      lang="id"
+      className={`${sans.variable} ${sansArabic.variable} ${sansChinese.variable} ${mono.variable} scroll-smooth motion-reduce:scroll-auto`}
+    >
       <body className="font-sans antialiased text-slate-900 bg-slate-50">
         {children}
       </body>

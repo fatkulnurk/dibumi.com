@@ -8,7 +8,15 @@ import WorkflowMethodology from "@/components/WorkflowMethodology";
 import Standards from "@/components/Standards";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
-import { getDictionary, isLocale, locales } from "@/lib/i18n";
+import { getDictionary, isLocale, locales, type Locale } from "@/lib/i18n";
+
+const localeFontClass: Record<Locale, string> = {
+  id: "font-sans",
+  en: "font-sans",
+  pl: "font-sans",
+  ar: "font-ar",
+  zh: "font-zh",
+};
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
@@ -40,7 +48,7 @@ export default async function LocalizedHomePage({ params }: LocalePageProps) {
   const direction = localeParam === "ar" ? "rtl" : "ltr";
 
   return (
-    <div lang={localeParam} dir={direction}>
+    <div lang={localeParam} dir={direction} className={localeFontClass[localeParam]}>
       <main className="flex min-h-screen flex-col justify-between bg-slate-50 text-slate-900 selection:bg-brand-100 selection:text-brand-950">
         <Navbar locale={localeParam} content={content.nav} />
         <div className="flex-grow">

@@ -24,6 +24,9 @@ export default {
       },
       fontFamily: {
         sans: ["var(--font-sans)", "system-ui", "-apple-system", "sans-serif"],
+        ar: ["var(--font-sans-ar)", "var(--font-sans)", "system-ui", "sans-serif"],
+        zh: ["var(--font-sans-zh)", "var(--font-sans)", "system-ui", "sans-serif"],
+        mono: ["var(--font-mono-plex)", "ui-monospace", "SFMono-Regular", "monospace"],
       },
       keyframes: {
         "fade-up": {
